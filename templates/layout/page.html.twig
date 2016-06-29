@@ -46,7 +46,9 @@
 <div class="layout-container">
 
   <header role="banner">
-    {{ page.header }}
+    {% if page.header_menu %}
+      {{ page.header_menu }}
+    {% endif %}
   </header>
 
   {{ page.primary_menu }}
