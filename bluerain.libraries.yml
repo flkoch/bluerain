@@ -1,0 +1,11 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      style/css/main.css: { media: screen }
+      style/css/print.css: { media: print }
+  js:
+    theme:
+      js/main.js: {}
+  dependencies:
+    - core/jquery
