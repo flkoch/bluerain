@@ -13,7 +13,9 @@
  */
 #}
 {% if content %}
-  <div{{ attributes.setAttribute("id", "header-menu") }}>
-    {{ content }}
+  <div id="main-navbar">
+    <div{{ attributes.addClass("container") }}>
+      {{ content }}
+    </div>
   </div>
 {% endif %}

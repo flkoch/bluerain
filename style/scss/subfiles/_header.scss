@@ -1,0 +1,52 @@
+header {
+  background-color: $header-bg;
+  position: static;
+  overflow-x: hidden;
+  nav {
+    > h2 {
+      display: none;
+    }
+    ul, ol {
+      list-style: none;
+      padding: 5px 0px;
+      margin: 0px auto 15px;
+      @extend .container;
+      li {
+        float: right;
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: -0.05px;
+            color: inherit;
+          }
+        }
+      }
+    }
+    width: 100%;
+    background-color: $header-nav-bg;
+    color: $header-nav-color;
+    
+  } 
+}
+#block-bluerain-branding {
+  @extend .container;
+  max-height: 300px;
+  paddinng: 5px 0px 10px;
+  a {
+    img {
+      max-height: 285px;
+      min-height: 35px;
+    }
+    color: header-bg;
+    &:hover {
+      color: header-bg;
+      text-decoration: none;
+    }
+    &~a {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+nav#block-bluerain-main-menu {
+
+  ul, ol {
+    // @extend .container;
+    list-style: none;
+    padding-right: -30px;
+    margin: 0px auto;
+    overflow: hidden;
+    li {
+      display: block;
+      float: left;
+      position: relative;
+      padding: 15px 0px;
+      margin-right: 30px;
+      a {
+        padding: 13px 0px 15px;
+        color: $main-menu-color;
+        text-decoration: none;
+        &:hover{
+          color: $main-menu-hover-color;
+          text-decoration: inherit;
+          box-shadow: 0px -2px 0px $main-menu-hover-color inset;
+        }
+      }
+    }
+  }
+}
+#main-navbar {
+  background: $main-menu-bg;
+  border-bottom: 1px darken($main-menu-bg,10%) solid;
+}
