@@ -1,37 +1,37 @@
 @charset "UTF-8";
-.container, header nav ul, header nav ol, #block-bluerain-branding {
+.container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
 }
-.container::after, header nav ul::after, header nav ol::after, #block-bluerain-branding::after {
+.container::after, header nav ul::after, header nav ol::after, #block-bluerain-search::after, #block-bluerain-branding::after, #block-bluerain-breadcrumbs nav::after {
   content: "";
   display: table;
   clear: both;
 }
 @media (min-width: 378px) {
-  .container, header nav ul, header nav ol, #block-bluerain-branding {
+  .container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
     max-width: 396px;
   }
 }
 @media (min-width: 544px) {
-  .container, header nav ul, header nav ol, #block-bluerain-branding {
+  .container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
     max-width: 576px;
   }
 }
 @media (min-width: 768px) {
-  .container, header nav ul, header nav ol, #block-bluerain-branding {
+  .container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
     max-width: 720px;
   }
 }
 @media (min-width: 992px) {
-  .container, header nav ul, header nav ol, #block-bluerain-branding {
+  .container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
     max-width: 940px;
   }
 }
 @media (min-width: 1200px) {
-  .container, header nav ul, header nav ol, #block-bluerain-branding {
+  .container, header nav ul, header nav ol, #block-bluerain-search, #block-bluerain-branding, #block-bluerain-breadcrumbs nav {
     max-width: 1140px;
   }
 }
@@ -4195,6 +4195,18 @@ body a:hover {
   color: #0275d8;
 }
 
+input {
+  line-height: 2;
+  border-radius: 25px;
+  border: 1px solid #0232cc;
+  background: none;
+  margin: 5px 10px;
+}
+
+input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password] {
+  padding: 5px 15px;
+}
+
 header {
   background-color: #fff;
   position: static;
@@ -4212,9 +4224,18 @@ header nav ul, header nav ol {
   list-style: none;
   padding: 5px 0px;
   margin: 0px auto 15px;
+  text-align: right;
 }
 header nav ul li, header nav ol li {
-  float: right;
+  display: inline-block;
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #818a91;
+}
+header nav ul li:last-child, header nav ol li:last-child {
+  margin: 0px;
+  padding: 0px;
+  border: none;
 }
 header nav ul li a, header nav ol li a {
   color: inherit;
@@ -4223,13 +4244,13 @@ header nav ul li a, header nav ol li a {
 header nav ul li a:hover, header nav ol li a:hover {
   font-weight: 900;
   text-decoration: none;
-  letter-spacing: -0.05px;
+  letter-spacing: -0.4px;
   color: inherit;
 }
 
 #block-bluerain-branding {
   max-height: 300px;
-  paddinng: 5px 0px 10px;
+  paddinng: 5px 10px 10px 0px;
 }
 #block-bluerain-branding a {
   color: header-bg;
@@ -4244,6 +4265,22 @@ header nav ul li a:hover, header nav ol li a:hover {
 }
 #block-bluerain-branding a ~ a {
   display: none;
+}
+
+#block-bluerain-search {
+  padding: 5px 0px 10px 10px;
+}
+#block-bluerain-search h2 {
+  display: none;
+}
+#block-bluerain-search form {
+  text-align: right;
+}
+#block-bluerain-search form div {
+  display: inline;
+}
+#block-bluerain-search form div input {
+  text-align: left;
 }
 
 nav#block-bluerain-main-menu ul, nav#block-bluerain-main-menu ol {
@@ -4276,9 +4313,11 @@ nav#block-bluerain-main-menu ul li a:hover, nav#block-bluerain-main-menu ol li a
 }
 
 .breadcrumb {
-  padding: 0.75rem 1rem;
+  padding: 0.75rem 0px;
   list-style: none;
   background-color: #eceeef;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 .breadcrumb::after {
   content: "";
@@ -4294,8 +4333,19 @@ nav#block-bluerain-main-menu ul li a:hover, nav#block-bluerain-main-menu ol li a
   color: #818a91;
   content: "/";
 }
+.breadcrumb > li a {
+  color: #818a91;
+}
+.breadcrumb > li a:hover {
+  text-decoration: none;
+  color: #373a3c;
+}
 .breadcrumb > .active {
   color: #818a91;
+}
+
+#block-bluerain-breadcrumbs {
+  background-color: #eceeef;
 }
 
 /*# sourceMappingURL=main.css.map */

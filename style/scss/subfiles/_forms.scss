@@ -1,0 +1,10 @@
+input {
+  line-height: 2;
+  border-radius: 25px;
+  border: 1px solid $brand-primary;
+  background: none;
+  margin: 5px 10px;
+}
+input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password]{
+  padding: 5px 15px;
+}

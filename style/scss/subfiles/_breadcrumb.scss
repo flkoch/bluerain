@@ -3,6 +3,8 @@
   list-style: none;
   background-color: $breadcrumb-bg;
   @include clearfix;
+  margin-top: 0px;
+  margin-bottom: 0px;
 
   > li {
     float: left;
@@ -13,9 +15,22 @@
       color: $breadcrumb-divider-color;
       content: "#{$breadcrumb-divider}";
     }
+    a {
+      color: $breadcrumb-color;
+      &:hover {
+        text-decoration: none;
+        color: $breadcrumb-hover-color;
+      }
+    }
   }
 
   > .active {
     color: $breadcrumb-active-color;
+  }
+}
+#block-bluerain-breadcrumbs {
+  background-color: $breadcrumb-bg;
+  nav {
+    @extend .container;
   }
 }
