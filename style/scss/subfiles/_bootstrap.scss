@@ -38,6 +38,7 @@ $container-max-widths: (
 
 // $grid-columns:               12;
 // $grid-gutter-width:          1.825rem; // 30px
+$grid-gutter-width:     0rem;
 
 
 @import "../../../dependencies/bootstrap/scss/bootstrap-grid"

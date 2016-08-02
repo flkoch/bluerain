@@ -1,5 +1,5 @@
 .breadcrumb {
-  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   list-style: none;
   background-color: $breadcrumb-bg;
   @include clearfix;

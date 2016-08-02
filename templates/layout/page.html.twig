@@ -58,8 +58,12 @@
   <header role="banner">
     {{ page.header_menu }}
     {% if page.logo and page.searchbar %}
-      {{ page.logo }}
-      {{ page.searchbar }}
+      <div class="container">
+        <div class="row">
+          {{ page.logo }}
+          {{ page.searchbar }}
+        </div>
+      </div>
     {% elseif page.logo or page.searchbar %}
       {{ page.logo }}
       {{ page.searchbar }}
