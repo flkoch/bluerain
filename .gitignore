@@ -41,3 +41,5 @@ Thumbs.db
 *.css.map
 koala-config.json
 dependencies/fontawesome/css
+/dependencies/bootstrap/version.txt
+/dependencies/fontawesome/version.txt

@@ -1,12 +1,10 @@
 nav#block-bluerain-main-menu {
 
   ul, ol {
-    // @extend .container;
     list-style: none;
     padding-right: -30px;
     padding-left: 0px;
     margin: 0px auto;
-    overflow: hidden;
     li {
       display: block;
       float: left;
@@ -20,7 +18,46 @@ nav#block-bluerain-main-menu {
         &:hover{
           color: $main-menu-hover-color;
           text-decoration: inherit;
-          box-shadow: 0px -2px 0px $main-menu-hover-color inset;
+          @include box-shadows(0px -2px 0px $main-menu-hover-color inset);
+        }
+      }
+      &.dropdown {
+        > a:after {
+          font-family: "FontAwesome";
+          content: " \f078";
+          color: $main-menu-color;
+        }
+        > ul {
+          display: none;
+          position: absolute;
+          top: 50px;
+          left: 0px;
+          width: 200px;
+          background-color: $main-menu-dropdown-bg;
+          color: $main-menu-dropdown-color;
+          z-index: 500;
+          > li {
+            border-top: 1px $main-menu-dropdown-hover-bg solid;
+            &:last-child {
+              border-bottom: 1px $main-menu-dropdown-hover-bg solid;
+            }
+            > a {
+              color: $main-menu-dropdown-color;
+              padding-left: 10px;
+              padding-right: 10px;
+              &:hover {
+                color: $main-menu-dropdown-hover-color;
+                box-shadow: none;
+                background: $main-menu-dropdown-hover-bg;
+              }
+            }
+          }
+        }
+        &:hover {
+          > ul {
+            display: block;
+
+          }
         }
       }
     }
