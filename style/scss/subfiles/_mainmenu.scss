@@ -59,11 +59,11 @@ nav#block-bluerain-main-menu {
           background-color: $main-menu-dropdown-bg;
           color: $main-menu-dropdown-color;
           li, li.active {
-            border-top: 1px $main-menu-dropdown-hover-bg solid;
+            border-top: 1px $main-menu-dropdown-devider solid;
             padding: 10px 10px;
             width: $dropdown-menu-width - (2 * 10px);
             &:last-child {
-              border-bottom: 1px $main-menu-dropdown-hover-bg solid;
+              border-bottom: 1px $main-menu-dropdown-devider solid;
             }
             &:hover {
               color: $main-menu-dropdown-hover-color;
@@ -74,6 +74,14 @@ nav#block-bluerain-main-menu {
                 font-family: "FontAwesome";
                 content: " \f0da";
                 color: $main-menu-dropdown-color;
+              }
+              ul.dropdown-menu {
+                border-left: 5px $main-menu-dropdown-devider solid;
+              }
+              &:hover > ul.dropdown-menu {
+                display: block;
+                left: $dropdown-menu-width;
+                top: 0px;
               }
             }
             > a {
