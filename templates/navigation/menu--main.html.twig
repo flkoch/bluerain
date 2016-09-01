@@ -32,18 +32,31 @@
     {% if menu_level == 0 %}
       <ul{{ attributes }}>
     {% else %}
-      <ul>
+      <ul class="dropdown-menu">
     {% endif %}
     {% for item in items %}
-      {% if item.below %}
-        <li{{ item.attributes.addClass("dropdown") }}>
-          {{ link(item.title, item.url) }}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        </li>
+      {% if item.in_active_trail %}
+        {% if item.below %}
+          <li{{ item.attributes.addClass("active dropdown") }}>
+            {{ link(item.title, item.url) }}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          </li>
+        {% else %}
+          <li{{ item.attributes.addClass("active") }}>
+            {{ link(item.title, item.url) }}
+          </li>
+        {% endif %}
       {% else %}
-        <li{{ item.attributes }}>
-          {{ link(item.title, item.url) }}
-        </li>
+        {% if item.below %}
+          <li{{ item.attributes.addClass("dropdown") }}>
+            {{ link(item.title, item.url) }}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          </li>
+        {% else %}
+          <li{{ item.attributes }}>
+            {{ link(item.title, item.url) }}
+          </li>
+        {% endif %}
       {% endif %}
     {% endfor %}
     </ul>

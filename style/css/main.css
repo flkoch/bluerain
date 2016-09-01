@@ -1108,54 +1108,82 @@ header {
       #block-bluerain-search form div input[type=submit] {
         display: none; }
 
-nav#block-bluerain-main-menu ul, nav#block-bluerain-main-menu ol {
+nav#block-bluerain-main-menu > ul, nav#block-bluerain-main-menu > ol {
   list-style: none;
   padding-right: -30px;
   padding-left: 0px;
   margin: 0px auto; }
-  nav#block-bluerain-main-menu ul li, nav#block-bluerain-main-menu ol li {
+  nav#block-bluerain-main-menu > ul > li, nav#block-bluerain-main-menu > ul > li.active, nav#block-bluerain-main-menu > ol > li, nav#block-bluerain-main-menu > ol > li.active {
     display: block;
     float: left;
     position: relative;
     padding: 15px 0px;
     margin-right: 30px; }
-    nav#block-bluerain-main-menu ul li a, nav#block-bluerain-main-menu ol li a {
+    nav#block-bluerain-main-menu > ul > li:hover > a, nav#block-bluerain-main-menu > ul > li.active:hover > a, nav#block-bluerain-main-menu > ol > li:hover > a, nav#block-bluerain-main-menu > ol > li.active:hover > a {
+      color: #fff;
+      text-decoration: inherit;
+      -moz-box-shadow: 0px -2px 0px #fff inset;
+      -webkit-box-shadow: 0px -2px 0px #fff inset;
+      box-shadow: 0px -2px 0px #fff inset; }
+    nav#block-bluerain-main-menu > ul > li a, nav#block-bluerain-main-menu > ul > li.active a, nav#block-bluerain-main-menu > ol > li a, nav#block-bluerain-main-menu > ol > li.active a {
       padding: 13px 0px 15px;
       color: #f7f7f9;
       text-decoration: none; }
-      nav#block-bluerain-main-menu ul li a:hover, nav#block-bluerain-main-menu ol li a:hover {
-        color: #fff;
-        text-decoration: inherit;
-        -moz-box-shadow: 0px -2px 0px #fff inset;
-        -webkit-box-shadow: 0px -2px 0px #fff inset;
-        box-shadow: 0px -2px 0px #fff inset; }
-    nav#block-bluerain-main-menu ul li.dropdown > a:after, nav#block-bluerain-main-menu ol li.dropdown > a:after {
+    nav#block-bluerain-main-menu > ul > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > a:after {
       font-family: "FontAwesome";
-      content: " \f078";
+      content: " \f0d7";
       color: #f7f7f9; }
-    nav#block-bluerain-main-menu ul li.dropdown > ul, nav#block-bluerain-main-menu ol li.dropdown > ul {
-      display: none;
-      position: absolute;
+    nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu {
       top: 50px;
       left: 0px;
-      width: 200px;
-      background-color: #373a3c;
-      color: #eceeef;
       z-index: 500; }
-      nav#block-bluerain-main-menu ul li.dropdown > ul > li, nav#block-bluerain-main-menu ol li.dropdown > ul > li {
-        border-top: 1px #55595c solid; }
-        nav#block-bluerain-main-menu ul li.dropdown > ul > li:last-child, nav#block-bluerain-main-menu ol li.dropdown > ul > li:last-child {
+      nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after {
+        font-family: "FontAwesome";
+        content: " \f0da";
+        color: #eceeef; }
+      nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active > a {
+        color: #eceeef; }
+        nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active > a:hover {
+          box-shadow: none;
+          color: #f7f7f9; }
+    nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu {
+      display: none;
+      list-style: none;
+      position: absolute;
+      width: 200px;
+      padding: 0px;
+      background-color: #373a3c;
+      color: #eceeef; }
+      nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active {
+        border-top: 1px #55595c solid;
+        padding: 10px 10px;
+        width: 180px; }
+        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active:last-child {
           border-bottom: 1px #55595c solid; }
-        nav#block-bluerain-main-menu ul li.dropdown > ul > li > a, nav#block-bluerain-main-menu ol li.dropdown > ul > li > a {
-          color: #eceeef;
-          padding-left: 10px;
-          padding-right: 10px; }
-          nav#block-bluerain-main-menu ul li.dropdown > ul > li > a:hover, nav#block-bluerain-main-menu ol li.dropdown > ul > li > a:hover {
-            color: #f7f7f9;
+        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active:hover {
+          color: #f7f7f9;
+          background: #55595c; }
+        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after {
+          font-family: "FontAwesome";
+          content: " \f0da";
+          color: #eceeef; }
+        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active > a {
+          color: #eceeef; }
+          nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active > a:hover {
             box-shadow: none;
-            background: #55595c; }
-    nav#block-bluerain-main-menu ul li.dropdown:hover > ul, nav#block-bluerain-main-menu ol li.dropdown:hover > ul {
+            color: #f7f7f9; }
+    nav#block-bluerain-main-menu > ul > li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown:hover > ul.dropdown-menu {
       display: block; }
+  nav#block-bluerain-main-menu > ul > li.active > a, nav#block-bluerain-main-menu > ol > li.active > a {
+    -moz-box-shadow: 0px -1px 0px #f7f7f9 inset;
+    -webkit-box-shadow: 0px -1px 0px #f7f7f9 inset;
+    box-shadow: 0px -1px 0px #f7f7f9 inset; }
+  nav#block-bluerain-main-menu > ul > li.active > a.is-active, nav#block-bluerain-main-menu > ol > li.active > a.is-active {
+    color: #f7f7f9; }
+  nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active {
+    background-color: #373a3c; }
+    nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active a.is-active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active a.is-active {
+      color: #f7f7f9; }
 
 #main-navbar {
   background: #0033cc;

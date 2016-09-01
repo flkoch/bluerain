@@ -1,63 +1,108 @@
 nav#block-bluerain-main-menu {
 
-  ul, ol {
+  >ul, >ol {
     list-style: none;
     padding-right: -30px;
     padding-left: 0px;
     margin: 0px auto;
-    li {
+    >li, >li.active {
       display: block;
       float: left;
       position: relative;
       padding: 15px 0px;
       margin-right: 30px;
-      a {
-        padding: 13px 0px 15px;
-        color: $main-menu-color;
-        text-decoration: none;
-        &:hover{
+      &:hover {
+        > a {
           color: $main-menu-hover-color;
           text-decoration: inherit;
           @include box-shadows(0px -2px 0px $main-menu-hover-color inset);
         }
       }
+      a {
+        padding: 13px 0px 15px;
+        color: $main-menu-color;
+        text-decoration: none;
+      }
       &.dropdown {
         > a:after {
           font-family: "FontAwesome";
-          content: " \f078";
+          content: " \f0d7";
           color: $main-menu-color;
         }
-        > ul {
-          display: none;
-          position: absolute;
+        >ul.dropdown-menu {
           top: 50px;
           left: 0px;
-          width: 200px;
-          background-color: $main-menu-dropdown-bg;
-          color: $main-menu-dropdown-color;
           z-index: 500;
-          > li {
-            border-top: 1px $main-menu-dropdown-hover-bg solid;
-            &:last-child {
-              border-bottom: 1px $main-menu-dropdown-hover-bg solid;
+          >li, >li.active {
+            &.dropdown {
+              > a:after {
+                font-family: "FontAwesome";
+                content: " \f0da";
+                color: $main-menu-dropdown-color;
+              }
             }
             > a {
               color: $main-menu-dropdown-color;
-              padding-left: 10px;
-              padding-right: 10px;
               &:hover {
-                color: $main-menu-dropdown-hover-color;
                 box-shadow: none;
-                background: $main-menu-dropdown-hover-bg;
+                color: $main-menu-dropdown-hover-color;
+              }
+            }
+          }
+        }
+        ul.dropdown-menu {
+          display: none;
+          list-style: none;
+          position: absolute;
+          width: $dropdown-menu-width;
+          padding: 0px;
+          background-color: $main-menu-dropdown-bg;
+          color: $main-menu-dropdown-color;
+          li, li.active {
+            border-top: 1px $main-menu-dropdown-hover-bg solid;
+            padding: 10px 10px;
+            width: $dropdown-menu-width - (2 * 10px);
+            &:last-child {
+              border-bottom: 1px $main-menu-dropdown-hover-bg solid;
+            }
+            &:hover {
+              color: $main-menu-dropdown-hover-color;
+              background: $main-menu-dropdown-hover-bg;
+            }
+            &.dropdown {
+              > a:after {
+                font-family: "FontAwesome";
+                content: " \f0da";
+                color: $main-menu-dropdown-color;
+              }
+            }
+            > a {
+              color: $main-menu-dropdown-color;
+              &:hover {
+                box-shadow: none;
+                color: $main-menu-dropdown-hover-color;
               }
             }
           }
         }
         &:hover {
-          > ul {
+          >ul.dropdown-menu {
             display: block;
-
           }
+        }
+      }
+    }
+    >li.active {
+      >a {
+        @include box-shadows(0px -1px 0px $main-menu-active-color inset);
+      }
+      >a.is-active {
+        color: $main-menu-active-color;
+      }
+      &.dropdown ul.dropdown-menu li.active {
+        background-color: $main-menu-dropdown-active-bg;
+        a, a.is-active {
+          color: $main-menu-dropdown-active-color;
         }
       }
     }

@@ -17,10 +17,13 @@ $header-nav-color: $gray-lighter;
 $main-menu-bg: $brand-secondary;
 $main-menu-color: $gray-lightest;
 $main-menu-hover-color: #fff;
+$main-menu-active-color: $main-menu-color;
 $main-menu-dropdown-bg: $gray-dark;
 $main-menu-dropdown-color: $gray-lighter;
 $main-menu-dropdown-hover-color: $gray-lightest;
 $main-menu-dropdown-hover-bg: $gray;
+$main-menu-dropdown-active-color: $gray-lightest;
+$main-menu-dropdown-active-bg: $gray-dark;
 
 
 // Breadcrumb Color overrides
