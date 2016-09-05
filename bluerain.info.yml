@@ -11,8 +11,9 @@ regions:
     logo: Logo Position
     searchbar: Search bar
     primary_menu: Main Menu
+    secondary_menu: Side Menu
     # off_canvas: Off Canvas
-    maintopic: Main Topic
+    highlighted: Main Topic
     messages: Messages
     content: Content
     sidebar_first: Left Sidebar
@@ -23,7 +24,7 @@ regions:
     col_4: Fourth Column
     col_5: Fifth Column
     col_6: Sixth Column
-    breadcrumbs: Breadcrumbs
+    breadcrumb: Breadcrumbs
     footer: Footer
     footer_menu: Footer Menu
     credits: Credits

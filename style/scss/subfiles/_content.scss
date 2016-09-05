@@ -1,0 +1,27 @@
+main{
+  // Admin tools
+  div#block-bluerain-local-tasks {
+    display: block;
+    clear: both;
+    ul {
+      list-style: none;
+      float: left;
+      padding: 0px;
+      clear: both;
+      width: 100%;
+      li {
+        padding:5px 10px 0px 10px;
+        display: inline;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-top: 1px $gray-dark solid;
+        border-right: 1px $gray-dark solid;
+        border-left: 1px $gray-dark solid;
+        margin-right: 15px;
+        a.is-active {
+          color: $gray;
+        }
+      }
+    }
+  }
+}

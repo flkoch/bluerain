@@ -1,0 +1,18 @@
+body {
+  margin: 0px; // make the body extend right to the edge of the window
+  width: 100%;
+  color: $body-color; // color for regular text
+  background-color: $body-bg; // background for normal blocks
+  // General Link layout
+  a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    &:hover {
+      text-decoration: $link-hover-decoration;
+      color: $link-hover-color;
+    }
+  }
+  p {
+    text-align: justify;
+  }
+}
