@@ -93,7 +93,7 @@
         <div class="main-cols container">
             <div class="row">
                 {% for col in cols if col is not empty %}
-                  <section class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+                  <section class="col-xxs-12">
                     {{ col }}
                   </section>
                 {% endfor %}
@@ -106,7 +106,7 @@
         <div class="main-cols container">
             <div class="row">
                 {% for col in cols if col is not empty %}
-                  <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-12 col-xxs-12">
+                  <section class="col-sm-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% endfor %}
@@ -120,11 +120,11 @@
             <div class="row">
                 {% for col in cols if col is not empty %}
                   {% if loop.first %}
-                    <section class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12">
+                    <section class="col-md-4 col-xxs-12">
                       {{ col }}
                     </section>
                   {% else %}
-                    <section class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
+                    <section class="col-md-4 col-xs-6 col-xxs-12">
                       {{ col }}
                     </section>
                   {% endif %}
@@ -138,7 +138,7 @@
         <div class="main-cols container">
             <div class="row">
                 {% for col in cols if col is not empty %}
-                  <section class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12 col-xxs-12">
+                  <section class="col-lg-3 col-sm-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% endfor %}
@@ -152,23 +152,23 @@
             <div class="row">
               {% for col in cols if col is not empty %}
                 {% if loop.index == 1 %}
-                  <section class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+                  <section class="col-xl-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% elseif loop.index == 2 %}
-                  <section class="col-xl-6 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                  <section class="col-xl-6 col-lg-3 col-xs-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% elseif loop.index == 3 %}
-                  <section class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% elseif loop.index == 4 %}
-                  <section class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% elseif loop.index == 5 %}
-                  <section class="col-xl-4 col-lg-3 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% endif %}
@@ -182,7 +182,7 @@
         <div class="main-cols container">
             <div class="row">
                 {% for col in cols if col is not empty %}
-                  <section class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-6 col-xxs-12">
+                  <section class="col-lg-4 col-xs-6 col-xxs-12">
                     {{ col }}
                   </section>
                 {% endfor %}
@@ -194,24 +194,24 @@
     <div class="row">
       {% if page.sidebar_first %}
         {% if page.sidebar_second %}
-          <div class="maincontent col-xl-8 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12">
+          <div class="maincontent col-xl-8 col-md-6 col-xxs-12 push-xl-2 push-md-3">
               {{ cont }}
           </div>
-          <aside class="sidebar-left col-xl-2 col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_first }} </aside>
-          <aside class="sidebar-right col-xl-2 col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_second }} </aside>
+          <aside class="sidebar-left col-xl-2 col-md-3 col-xs-6 col-xxs-12 pull-xl-8 pull-md-6"> {{ page.sidebar_first }} </aside>
+          <aside class="sidebar-right col-xl-2 col-md-3 col-xs-6 col-xxs-12 push-xl-2 push-md-3"> {{ page.sidebar_second }} </aside>
         {% else %}
-          <div class="maincontent col-xl-9 col-lg-9 col-md-8 col-sm-8 col-xs-12 col-xxs-12">
+          <div class="maincontent col-lg-9 col-sm-8 col-xxs-12 push-lg-3 push-sm-4">
               {{ cont }}
           </div>
-          <aside class="sidebar-left col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_first }} </aside>
+          <aside class="sidebar-left col-lg-3 col-sm-4 col-xxs-12 pull-lg-9 pull-sm-8"> {{ page.sidebar_first }} </aside>
         {% endif %}
       {% elseif page.sidebar_second %}
-        <div class="maincontent col-xl-9 col-lg-9 col-md-8 col-sm-8 col-xs-12 col-xxs-12">
+        <div class="maincontent col-lg-9 col-sm-8 col-xxs-12 push-lg-3 push-sm-4">
           {{ cont }}
         </div>
-        <aside class="sidebar-right col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_second }} </aside>
+        <aside class="sidebar-right col-lg-3 col-sm-4 col-xxs-12 pull lg-9 pull-sm-4"> {{ page.sidebar_second }} </aside>
       {% else %}
-        <div class="maincontent col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12">
+        <div class="maincontent col-xxs-12">
           {{ cont }}
         </div>
       {% endif %}
