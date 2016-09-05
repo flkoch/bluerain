@@ -120,11 +120,11 @@
             <div class="row">
                 {% for col in cols if col is not empty %}
                   {% if loop.first %}
-                    <section class="col-xl-4 col-lg-4 col-4-md col-sm-12 col-xs-12 col-xxs-12">
+                    <section class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12">
                       {{ col }}
                     </section>
                   {% else %}
-                    <section class="col-xl-4 col-lg-4 col-4-md col-sm-6 col-xs-6 col-xxs-12">
+                    <section class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 col-xxs-12">
                       {{ col }}
                     </section>
                   {% endif %}
@@ -194,24 +194,24 @@
     <div class="row">
       {% if page.sidebar_first %}
         {% if page.sidebar_second %}
-          <div class="maincontent">
+          <div class="maincontent col-xl-8 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12">
               {{ cont }}
           </div>
-          <aside class="sidebar_left col-xl-2 col-lg-3 col-3-md col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_first }} </aside>
-          <aside class="sidebar_right col-xl-2 col-lg-3 col-3-md col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_second }} </aside>
+          <aside class="sidebar-left col-xl-2 col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_first }} </aside>
+          <aside class="sidebar-right col-xl-2 col-lg-3 col-md-3 col-sm-6 col-xs-6 col-xxs-12"> {{ page.sidebar_second }} </aside>
         {% else %}
-          <div class="maincontent">
+          <div class="maincontent col-xl-9 col-lg-9 col-md-8 col-sm-8 col-xs-12 col-xxs-12">
               {{ cont }}
           </div>
-          <aside class="sidebar_left col-xl-3 col-lg-3 col-4-md col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_first }} </aside>
+          <aside class="sidebar-left col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_first }} </aside>
         {% endif %}
       {% elseif page.sidebar_second %}
-        <div class="maincontent">
+        <div class="maincontent col-xl-9 col-lg-9 col-md-8 col-sm-8 col-xs-12 col-xxs-12">
           {{ cont }}
         </div>
-        <aside class="sidebar_right col-xl-3 col-lg-3 col-4-md col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_second }} </aside>
+        <aside class="sidebar-right col-xl-3 col-lg-3 col-md-4 col-sm-4 col-xs-12 col-xxs-12"> {{ page.sidebar_second }} </aside>
       {% else %}
-        <div class="maincontent">
+        <div class="maincontent col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12">
           {{ cont }}
         </div>
       {% endif %}
@@ -231,15 +231,15 @@
             <section class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer_menu }} </section>
           {% endif %}
         {% elseif page.credits %}
-          <section class="col-xl-6 col-lg-4 col-4-md col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer }} </section>
-          <section class="col-xl-6 col-8-lg col-8-md col-sm-12 col-xs-12 col-xxs-12"> {{ page.credits }} </section>
+          <section class="col-xl-6 col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer }} </section>
+          <section class="col-xl-6 col-lg-8 col-md-8 col-sm-12 col-xs-12 col-xxs-12"> {{ page.credits }} </section>
         {% else %}
           <section class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer }} </section>
         {% endif %}
       {% elseif page.footer_menu %}
         {% if page.credits %}
-          <section class="col-xl-6 col-lg-4 col-4-md col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer_menu }} </section>
-          <section class="col-xl-6 col-8-lg col-8-md col-sm-12 col-xs-12 col-xxs-12"> {{ page.credits }} </section>
+          <section class="col-xl-6 col-lg-4 col-md-4 col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer_menu }} </section>
+          <section class="col-xl-6 col-lg-8 col-md-8 col-sm-12 col-xs-12 col-xxs-12"> {{ page.credits }} </section>
         {% else %}
           <section class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xxs-12"> {{ page.footer_menu }} </section>
         {% endif %}

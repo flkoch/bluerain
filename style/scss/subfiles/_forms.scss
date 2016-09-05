@@ -8,3 +8,13 @@ input {
 input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password]{
   padding: 5px 15px;
 }
+form.comment-form {
+  input {
+    line-height: 1;
+    border-radius: 10px;
+    margin: 5px 0px;
+    &[type=text], &[type=submit] {
+      padding: 1px 5px 2px;
+    }
+  }
+}

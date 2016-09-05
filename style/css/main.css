@@ -1041,6 +1041,13 @@ input {
 input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password] {
   padding: 5px 15px; }
 
+form.comment-form input {
+  line-height: 1;
+  border-radius: 10px;
+  margin: 5px 0px; }
+  form.comment-form input[type=text], form.comment-form input[type=submit] {
+    padding: 1px 5px 2px; }
+
 header {
   background-color: #fff;
   position: static;
@@ -1194,6 +1201,36 @@ nav#block-bluerain-main-menu > ul, nav#block-bluerain-main-menu > ol {
 #main-navbar {
   background: #0033cc;
   border-bottom: 1px #002699 solid; }
+
+main div#block-bluerain-local-tasks {
+  display: block;
+  clear: both; }
+  main div#block-bluerain-local-tasks ul {
+    list-style: none;
+    float: left;
+    padding: 0px;
+    clear: both;
+    width: 100%; }
+    main div#block-bluerain-local-tasks ul li {
+      padding: 5px 10px 0px 10px;
+      display: inline;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-top: 1px #373a3c solid;
+      border-right: 1px #373a3c solid;
+      border-left: 1px #373a3c solid;
+      margin-right: 15px; }
+      main div#block-bluerain-local-tasks ul li a.is-active {
+        color: #55595c; }
+
+.sidebar-left {
+  float: left !important; }
+
+.maincontent {
+  float: right !important; }
+
+.sidebar-right {
+  float: right !important; }
 
 .breadcrumb {
   padding: 0.75rem 0px;
