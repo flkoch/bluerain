@@ -24,4 +24,33 @@ main{
       }
     }
   }
+  article img { // no overflow of images, retain proportion
+    max-width: 100%;
+    height: auto;
+  }
+  div.maincontent {
+    &.col-xl-8, &.col-md-6 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints,"md")) {
+          margin-left: 0.9125rem;
+          margin-right: 0.9125rem;
+        }
+      }
+    }
+    &.col-lg-9.push-lg-3, &.col-sm-8.push-sm-4 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin-left: 0.9125rem;
+          margin-right: 0rem;
+        }
+      }
+    }
+    &.col-lg-9, &.col-sm-8 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin-right: 0.9125rem;
+        }
+      }
+    }
+  }
 }

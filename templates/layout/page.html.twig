@@ -59,10 +59,8 @@
     {{ page.header_menu }}
     {% if page.logo and page.searchbar %}
       <div class="container">
-        <div class="row">
-          {{ page.logo }}
-          {{ page.searchbar }}
-        </div>
+        {{ page.logo }}
+        {{ page.searchbar }}
       </div>
     {% elseif page.logo or page.searchbar %}
       {{ page.logo }}
@@ -84,142 +82,128 @@
       {% set active = active + 1 %}
     {% endfor %}
     
-    {# Different layout according two number of columns #}
+    {# Different layout according to number of columns #}
     {% if active == 0 %} {# no column #}
       {% set cont= page.content %}
     {% elseif active == 1 %} {# one column #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-                {% for col in cols if col is not empty %}
-                  <section class="col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% endfor %}
-            </div>
+              {% for col in cols if col is not empty %}
+                <section class="col-xxs-12">
+                  {{ col }}
+                </section>
+              {% endfor %}
         </div>
       {% endset %}
     {% elseif active == 2 %} {# two columns #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-                {% for col in cols if col is not empty %}
-                  <section class="col-sm-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% endfor %}
-            </div>
+              {% for col in cols if col is not empty %}
+                <section class="col-sm-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% endfor %}
         </div>
       {% endset %}
     {% elseif active == 3 %} {# three columns #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-                {% for col in cols if col is not empty %}
-                  {% if loop.first %}
-                    <section class="col-md-4 col-xxs-12">
-                      {{ col }}
-                    </section>
-                  {% else %}
-                    <section class="col-md-4 col-xs-6 col-xxs-12">
-                      {{ col }}
-                    </section>
-                  {% endif %}
-                {% endfor %}
-            </div>
+              {% for col in cols if col is not empty %}
+                {% if loop.first %}
+                  <section class="col-md-4 col-xxs-12">
+                    {{ col }}
+                  </section>
+                {% else %}
+                  <section class="col-md-4 col-xs-6 col-xxs-12">
+                    {{ col }}
+                  </section>
+                {% endif %}
+              {% endfor %}
         </div>
       {% endset %}
     {% elseif active == 4 %} {# four columns #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-                {% for col in cols if col is not empty %}
-                  <section class="col-lg-3 col-sm-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% endfor %}
-            </div>
+              {% for col in cols if col is not empty %}
+                <section class="col-lg-3 col-sm-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% endfor %}
         </div>
       {% endset %}
     {% elseif active == 5 %} {# five columns #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-              {% for col in cols if col is not empty %}
-                {% if loop.index == 1 %}
-                  <section class="col-xl-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% elseif loop.index == 2 %}
-                  <section class="col-xl-6 col-lg-3 col-xs-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% elseif loop.index == 3 %}
-                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% elseif loop.index == 4 %}
-                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% elseif loop.index == 5 %}
-                  <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% endif %}
-              {% endfor %}
-          </div>
+            {% for col in cols if col is not empty %}
+              {% if loop.index == 1 %}
+                <section class="col-xl-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% elseif loop.index == 2 %}
+                <section class="col-xl-6 col-lg-3 col-xs-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% elseif loop.index == 3 %}
+                <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% elseif loop.index == 4 %}
+                <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% elseif loop.index == 5 %}
+                <section class="col-xl-4 col-lg-3 col-xs-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% endif %}
+            {% endfor %}
         </div>
       {% endset %}
     {% else %} {# six columns #}
       {% set cont %}
         {{ page.content }}
         <div class="main-cols container">
-            <div class="row">
-                {% for col in cols if col is not empty %}
-                  <section class="col-lg-4 col-xs-6 col-xxs-12">
-                    {{ col }}
-                  </section>
-                {% endfor %}
-            </div>
+              {% for col in cols if col is not empty %}
+                <section class="col-lg-4 col-xs-6 col-xxs-12">
+                  {{ col }}
+                </section>
+              {% endfor %}
         </div>
       {% endset %}
     {% endif %}
     
-    <div class="row">
-      {% if page.sidebar_first %}
-        {% if page.sidebar_second %}
-          <div class="maincontent col-xl-8 col-md-6 col-xxs-12 push-xl-2 push-md-3">
-              {{ cont }}
-          </div>
-          <aside class="sidebar-left col-xl-2 col-md-3 col-xs-6 col-xxs-12 pull-xl-8 pull-md-6"> {{ page.sidebar_first }} </aside>
-          <aside class="sidebar-right col-xl-2 col-md-3 col-xs-6 col-xxs-12 push-xl-2 push-md-3"> {{ page.sidebar_second }} </aside>
-        {% else %}
-          <div class="maincontent col-lg-9 col-sm-8 col-xxs-12 push-lg-3 push-sm-4">
-              {{ cont }}
-          </div>
-          <aside class="sidebar-left col-lg-3 col-sm-4 col-xxs-12 pull-lg-9 pull-sm-8"> {{ page.sidebar_first }} </aside>
-        {% endif %}
-      {% elseif page.sidebar_second %}
-        <div class="maincontent col-lg-9 col-sm-8 col-xxs-12 push-lg-3 push-sm-4">
-          {{ cont }}
+    {% if page.sidebar_first %}
+      {% if page.sidebar_second %}
+        <div class="maincontent col-xl-8 col-md-6 col-xxs-12 push-xl-2 push-md-3">
+            {{ cont }}
         </div>
-        <aside class="sidebar-right col-lg-3 col-sm-4 col-xxs-12 pull lg-9 pull-sm-4"> {{ page.sidebar_second }} </aside>
+        <aside class="sidebar-left col-xl-2 col-md-3 col-xs-6 col-xxs-12 pull-xl-8 pull-md-6"> {{ page.sidebar_first }} </aside>
+        <aside class="sidebar-right col-xl-2 col-md-3 col-xs-6 col-xxs-12"> {{ page.sidebar_second }} </aside>
       {% else %}
-        <div class="maincontent col-xxs-12">
-          {{ cont }}
+        <div class="maincontent col-lg-9 col-sm-8 col-xxs-12 push-lg-3 push-sm-4">
+            {{ cont }}
         </div>
+        <aside class="sidebar-left col-lg-3 col-sm-4 col-xxs-12 pull-lg-9 pull-sm-8"> {{ page.sidebar_first }} </aside>
       {% endif %}
-    </div>
+    {% elseif page.sidebar_second %}
+      <div class="maincontent col-lg-9 col-sm-8 col-xxs-12">
+        {{ cont }}
+      </div>
+      <aside class="sidebar-right col-lg-3 col-sm-4 col-xxs-12"> {{ page.sidebar_second }} </aside>
+    {% else %}
+      <div class="maincontent col-xxs-12">
+        {{ cont }}
+      </div>
+    {% endif %}
   </main>
   {{ page.breadcrumb }}
   {% if page.footer or page.footer_menu or page.credits %}
-    <footer role="contentinfo" class="row">
+    <footer role="contentinfo">
       {% if page.footer %}
         {% if page.footer_menu %}
           {% if page.credits %}
