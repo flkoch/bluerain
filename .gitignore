@@ -42,3 +42,17 @@ Thumbs.db
 koala-config.json
 /dependencies/bootstrap/version.txt
 /dependencies/fontawesome/version.txt
+/templates/form/checkboxes.html.twig
+/templates/form/confirm-form.html.twig
+/templates/form/container.html.twig
+/templates/form/datetime-form.html.twig
+/templates/form/datetime-wrapper.html.twig
+/templates/form/details.html.twig
+/templates/form/dropbutton-wrapper.html.twig
+/templates/form/field-multiple-value-form.html.twig
+/templates/form/fieldset.html.twig
+/templates/form/form-element-label.html.twig
+/templates/form/form-element.html.twig
+/templates/form/form.html.twig
+/templates/form/radios.html.twig
+/templates/form/select.html.twig

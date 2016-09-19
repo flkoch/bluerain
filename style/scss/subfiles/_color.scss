@@ -26,7 +26,19 @@ $main-menu-dropdown-active-color: $gray-lightest;
 $main-menu-dropdown-active-bg: $gray-dark;
 $main-menu-dropdown-devider: $gray-light;
 
+// Highlight
+$highlight-bg: $gray-lightest !default;
+$highlight-border: 1px $gray-lighter solid !default;
+
 
 // Breadcrumb Color overrides
 $breadcrumb-color: $gray-light;
 $breadcrumb-hover-color: $gray-dark;
+
+
+// Footer colors
+$footer-bg: $gray-dark;
+$footer-color: $gray;
+$footer-link-color: $footer-color !default;
+$footer-link-hover-color: $footer-link-color !default;
+$footer-link-hover-color: $gray-light;

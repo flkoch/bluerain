@@ -1,8 +1,7 @@
 body {
   margin: 0px; // make the body extend right to the edge of the window
   width: 100%;
-  color: $body-color; // color for regular text
-  background-color: $body-bg; // background for normal blocks
+  background-color: $footer-bg;
   // General Link layout
   a {
     color: $link-color;
@@ -14,5 +13,28 @@ body {
   }
   p {
     text-align: justify;
+    margin: 0px 0px 16px 0px;
   }
 }
+.layout-container {
+  background-color: $body-bg; // background for normal blocks
+  color: $body-color; // color for regular text
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint){
+      .margin-#{$breakpoint}-left {
+        >*:first-child {
+          margin-left: $grid-width;
+        }
+      }
+      .margin-#{$breakpoint}-right {
+        >*:last-child {
+          margin-right: $grid-width;
+        }
+      }
+      .margin-#{$breakpoint} {
+        @extend .margin-#{$breakpoint}-left;
+        @extend .margin-#{$breakpoint}-right;
+      }
+    }
+  }

@@ -11,7 +11,7 @@ regions:
     logo: Logo Position
     searchbar: Search bar
     primary_menu: Main Menu
-    secondary_menu: Side Menu
+    # secondary_menu: Side Menu
     # off_canvas: Off Canvas
     highlighted: Main Topic
     messages: Messages
