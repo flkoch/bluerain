@@ -39,7 +39,7 @@ $container-max-widths: (
 // $grid-columns:               14;
 // $grid-gutter-width:          1.825rem; // 30px
 $grid-gutter-width:     0rem;
-// $enable-flex: true;
+$enable-flex: true;
 
 
 @import "../../../dependencies/bootstrap/scss/bootstrap-grid"
