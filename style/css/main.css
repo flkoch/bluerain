@@ -1,23 +1,29 @@
 @import url(../../dependencies/fontawesome/css/font-awesome.min.css);
-.container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+.container, header nav ul,
+header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0rem;
   padding-right: 0rem; }
   @media (min-width: 396px) {
-    .container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    .container, header nav ul,
+    header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
       max-width: 378px; } }
   @media (min-width: 576px) {
-    .container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    .container, header nav ul,
+    header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
       max-width: 544px; } }
   @media (min-width: 768px) {
-    .container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    .container, header nav ul,
+    header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
       max-width: 720px; } }
   @media (min-width: 992px) {
-    .container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    .container, header nav ul,
+    header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
       max-width: 940px; } }
   @media (min-width: 1200px) {
-    .container, header nav ul, header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    .container, header nav ul,
+    header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
       max-width: 1140px; } }
 
 .container-fluid {
@@ -216,168 +222,119 @@
     min-height: 1px;
     padding-right: 0rem;
     padding-left: 0rem; }
-
   .col-xs-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-
   .col-xs-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-
   .col-xs-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-
   .col-xs-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-
   .col-xs-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-
   .col-xs-6 {
     flex: 0 0 50%;
     max-width: 50%; }
-
   .col-xs-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-
   .col-xs-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
-
   .col-xs-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-
   .col-xs-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
-
   .col-xs-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-
   .col-xs-12 {
     flex: 0 0 100%;
     max-width: 100%; }
-
   .pull-xs-0 {
     right: auto; }
-
   .pull-xs-1 {
     right: 8.33333%; }
-
   .pull-xs-2 {
     right: 16.66667%; }
-
   .pull-xs-3 {
     right: 25%; }
-
   .pull-xs-4 {
     right: 33.33333%; }
-
   .pull-xs-5 {
     right: 41.66667%; }
-
   .pull-xs-6 {
     right: 50%; }
-
   .pull-xs-7 {
     right: 58.33333%; }
-
   .pull-xs-8 {
     right: 66.66667%; }
-
   .pull-xs-9 {
     right: 75%; }
-
   .pull-xs-10 {
     right: 83.33333%; }
-
   .pull-xs-11 {
     right: 91.66667%; }
-
   .pull-xs-12 {
     right: 100%; }
-
   .push-xs-0 {
     left: auto; }
-
   .push-xs-1 {
     left: 8.33333%; }
-
   .push-xs-2 {
     left: 16.66667%; }
-
   .push-xs-3 {
     left: 25%; }
-
   .push-xs-4 {
     left: 33.33333%; }
-
   .push-xs-5 {
     left: 41.66667%; }
-
   .push-xs-6 {
     left: 50%; }
-
   .push-xs-7 {
     left: 58.33333%; }
-
   .push-xs-8 {
     left: 66.66667%; }
-
   .push-xs-9 {
     left: 75%; }
-
   .push-xs-10 {
     left: 83.33333%; }
-
   .push-xs-11 {
     left: 91.66667%; }
-
   .push-xs-12 {
     left: 100%; }
-
   .offset-xs-0 {
     margin-left: 0%; }
-
   .offset-xs-1 {
     margin-left: 8.33333%; }
-
   .offset-xs-2 {
     margin-left: 16.66667%; }
-
   .offset-xs-3 {
     margin-left: 25%; }
-
   .offset-xs-4 {
     margin-left: 33.33333%; }
-
   .offset-xs-5 {
     margin-left: 41.66667%; }
-
   .offset-xs-6 {
     margin-left: 50%; }
-
   .offset-xs-7 {
     margin-left: 58.33333%; }
-
   .offset-xs-8 {
     margin-left: 66.66667%; }
-
   .offset-xs-9 {
     margin-left: 75%; }
-
   .offset-xs-10 {
     margin-left: 83.33333%; }
-
   .offset-xs-11 {
     margin-left: 91.66667%; } }
+
 @media (min-width: 576px) {
   .col-sm {
     position: relative;
@@ -387,168 +344,119 @@
     min-height: 1px;
     padding-right: 0rem;
     padding-left: 0rem; }
-
   .col-sm-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-
   .col-sm-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-
   .col-sm-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-
   .col-sm-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-
   .col-sm-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-
   .col-sm-6 {
     flex: 0 0 50%;
     max-width: 50%; }
-
   .col-sm-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-
   .col-sm-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
-
   .col-sm-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-
   .col-sm-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
-
   .col-sm-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-
   .col-sm-12 {
     flex: 0 0 100%;
     max-width: 100%; }
-
   .pull-sm-0 {
     right: auto; }
-
   .pull-sm-1 {
     right: 8.33333%; }
-
   .pull-sm-2 {
     right: 16.66667%; }
-
   .pull-sm-3 {
     right: 25%; }
-
   .pull-sm-4 {
     right: 33.33333%; }
-
   .pull-sm-5 {
     right: 41.66667%; }
-
   .pull-sm-6 {
     right: 50%; }
-
   .pull-sm-7 {
     right: 58.33333%; }
-
   .pull-sm-8 {
     right: 66.66667%; }
-
   .pull-sm-9 {
     right: 75%; }
-
   .pull-sm-10 {
     right: 83.33333%; }
-
   .pull-sm-11 {
     right: 91.66667%; }
-
   .pull-sm-12 {
     right: 100%; }
-
   .push-sm-0 {
     left: auto; }
-
   .push-sm-1 {
     left: 8.33333%; }
-
   .push-sm-2 {
     left: 16.66667%; }
-
   .push-sm-3 {
     left: 25%; }
-
   .push-sm-4 {
     left: 33.33333%; }
-
   .push-sm-5 {
     left: 41.66667%; }
-
   .push-sm-6 {
     left: 50%; }
-
   .push-sm-7 {
     left: 58.33333%; }
-
   .push-sm-8 {
     left: 66.66667%; }
-
   .push-sm-9 {
     left: 75%; }
-
   .push-sm-10 {
     left: 83.33333%; }
-
   .push-sm-11 {
     left: 91.66667%; }
-
   .push-sm-12 {
     left: 100%; }
-
   .offset-sm-0 {
     margin-left: 0%; }
-
   .offset-sm-1 {
     margin-left: 8.33333%; }
-
   .offset-sm-2 {
     margin-left: 16.66667%; }
-
   .offset-sm-3 {
     margin-left: 25%; }
-
   .offset-sm-4 {
     margin-left: 33.33333%; }
-
   .offset-sm-5 {
     margin-left: 41.66667%; }
-
   .offset-sm-6 {
     margin-left: 50%; }
-
   .offset-sm-7 {
     margin-left: 58.33333%; }
-
   .offset-sm-8 {
     margin-left: 66.66667%; }
-
   .offset-sm-9 {
     margin-left: 75%; }
-
   .offset-sm-10 {
     margin-left: 83.33333%; }
-
   .offset-sm-11 {
     margin-left: 91.66667%; } }
+
 @media (min-width: 768px) {
   .col-md {
     position: relative;
@@ -558,168 +466,119 @@
     min-height: 1px;
     padding-right: 0rem;
     padding-left: 0rem; }
-
   .col-md-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-
   .col-md-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-
   .col-md-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-
   .col-md-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-
   .col-md-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-
   .col-md-6 {
     flex: 0 0 50%;
     max-width: 50%; }
-
   .col-md-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-
   .col-md-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
-
   .col-md-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-
   .col-md-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
-
   .col-md-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-
   .col-md-12 {
     flex: 0 0 100%;
     max-width: 100%; }
-
   .pull-md-0 {
     right: auto; }
-
   .pull-md-1 {
     right: 8.33333%; }
-
   .pull-md-2 {
     right: 16.66667%; }
-
   .pull-md-3 {
     right: 25%; }
-
   .pull-md-4 {
     right: 33.33333%; }
-
   .pull-md-5 {
     right: 41.66667%; }
-
   .pull-md-6 {
     right: 50%; }
-
   .pull-md-7 {
     right: 58.33333%; }
-
   .pull-md-8 {
     right: 66.66667%; }
-
   .pull-md-9 {
     right: 75%; }
-
   .pull-md-10 {
     right: 83.33333%; }
-
   .pull-md-11 {
     right: 91.66667%; }
-
   .pull-md-12 {
     right: 100%; }
-
   .push-md-0 {
     left: auto; }
-
   .push-md-1 {
     left: 8.33333%; }
-
   .push-md-2 {
     left: 16.66667%; }
-
   .push-md-3 {
     left: 25%; }
-
   .push-md-4 {
     left: 33.33333%; }
-
   .push-md-5 {
     left: 41.66667%; }
-
   .push-md-6 {
     left: 50%; }
-
   .push-md-7 {
     left: 58.33333%; }
-
   .push-md-8 {
     left: 66.66667%; }
-
   .push-md-9 {
     left: 75%; }
-
   .push-md-10 {
     left: 83.33333%; }
-
   .push-md-11 {
     left: 91.66667%; }
-
   .push-md-12 {
     left: 100%; }
-
   .offset-md-0 {
     margin-left: 0%; }
-
   .offset-md-1 {
     margin-left: 8.33333%; }
-
   .offset-md-2 {
     margin-left: 16.66667%; }
-
   .offset-md-3 {
     margin-left: 25%; }
-
   .offset-md-4 {
     margin-left: 33.33333%; }
-
   .offset-md-5 {
     margin-left: 41.66667%; }
-
   .offset-md-6 {
     margin-left: 50%; }
-
   .offset-md-7 {
     margin-left: 58.33333%; }
-
   .offset-md-8 {
     margin-left: 66.66667%; }
-
   .offset-md-9 {
     margin-left: 75%; }
-
   .offset-md-10 {
     margin-left: 83.33333%; }
-
   .offset-md-11 {
     margin-left: 91.66667%; } }
+
 @media (min-width: 992px) {
   .col-lg {
     position: relative;
@@ -729,168 +588,119 @@
     min-height: 1px;
     padding-right: 0rem;
     padding-left: 0rem; }
-
   .col-lg-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-
   .col-lg-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-
   .col-lg-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-
   .col-lg-4, header .logo-search .search {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-
   .col-lg-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-
   .col-lg-6 {
     flex: 0 0 50%;
     max-width: 50%; }
-
   .col-lg-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-
   .col-lg-8, header .logo-search .logo {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
-
   .col-lg-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-
   .col-lg-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
-
   .col-lg-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-
   .col-lg-12 {
     flex: 0 0 100%;
     max-width: 100%; }
-
   .pull-lg-0 {
     right: auto; }
-
   .pull-lg-1 {
     right: 8.33333%; }
-
   .pull-lg-2 {
     right: 16.66667%; }
-
   .pull-lg-3 {
     right: 25%; }
-
   .pull-lg-4 {
     right: 33.33333%; }
-
   .pull-lg-5 {
     right: 41.66667%; }
-
   .pull-lg-6 {
     right: 50%; }
-
   .pull-lg-7 {
     right: 58.33333%; }
-
   .pull-lg-8 {
     right: 66.66667%; }
-
   .pull-lg-9 {
     right: 75%; }
-
   .pull-lg-10 {
     right: 83.33333%; }
-
   .pull-lg-11 {
     right: 91.66667%; }
-
   .pull-lg-12 {
     right: 100%; }
-
   .push-lg-0 {
     left: auto; }
-
   .push-lg-1 {
     left: 8.33333%; }
-
   .push-lg-2 {
     left: 16.66667%; }
-
   .push-lg-3 {
     left: 25%; }
-
   .push-lg-4 {
     left: 33.33333%; }
-
   .push-lg-5 {
     left: 41.66667%; }
-
   .push-lg-6 {
     left: 50%; }
-
   .push-lg-7 {
     left: 58.33333%; }
-
   .push-lg-8 {
     left: 66.66667%; }
-
   .push-lg-9 {
     left: 75%; }
-
   .push-lg-10 {
     left: 83.33333%; }
-
   .push-lg-11 {
     left: 91.66667%; }
-
   .push-lg-12 {
     left: 100%; }
-
   .offset-lg-0 {
     margin-left: 0%; }
-
   .offset-lg-1 {
     margin-left: 8.33333%; }
-
   .offset-lg-2 {
     margin-left: 16.66667%; }
-
   .offset-lg-3 {
     margin-left: 25%; }
-
   .offset-lg-4 {
     margin-left: 33.33333%; }
-
   .offset-lg-5 {
     margin-left: 41.66667%; }
-
   .offset-lg-6 {
     margin-left: 50%; }
-
   .offset-lg-7 {
     margin-left: 58.33333%; }
-
   .offset-lg-8 {
     margin-left: 66.66667%; }
-
   .offset-lg-9 {
     margin-left: 75%; }
-
   .offset-lg-10 {
     margin-left: 83.33333%; }
-
   .offset-lg-11 {
     margin-left: 91.66667%; } }
+
 @media (min-width: 1200px) {
   .col-xl {
     position: relative;
@@ -900,168 +710,119 @@
     min-height: 1px;
     padding-right: 0rem;
     padding-left: 0rem; }
-
   .col-xl-1 {
     flex: 0 0 8.33333%;
     max-width: 8.33333%; }
-
   .col-xl-2 {
     flex: 0 0 16.66667%;
     max-width: 16.66667%; }
-
   .col-xl-3 {
     flex: 0 0 25%;
     max-width: 25%; }
-
   .col-xl-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-
   .col-xl-5 {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
-
   .col-xl-6 {
     flex: 0 0 50%;
     max-width: 50%; }
-
   .col-xl-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-
   .col-xl-8 {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
-
   .col-xl-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-
   .col-xl-10 {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
-
   .col-xl-11 {
     flex: 0 0 91.66667%;
     max-width: 91.66667%; }
-
   .col-xl-12 {
     flex: 0 0 100%;
     max-width: 100%; }
-
   .pull-xl-0 {
     right: auto; }
-
   .pull-xl-1 {
     right: 8.33333%; }
-
   .pull-xl-2 {
     right: 16.66667%; }
-
   .pull-xl-3 {
     right: 25%; }
-
   .pull-xl-4 {
     right: 33.33333%; }
-
   .pull-xl-5 {
     right: 41.66667%; }
-
   .pull-xl-6 {
     right: 50%; }
-
   .pull-xl-7 {
     right: 58.33333%; }
-
   .pull-xl-8 {
     right: 66.66667%; }
-
   .pull-xl-9 {
     right: 75%; }
-
   .pull-xl-10 {
     right: 83.33333%; }
-
   .pull-xl-11 {
     right: 91.66667%; }
-
   .pull-xl-12 {
     right: 100%; }
-
   .push-xl-0 {
     left: auto; }
-
   .push-xl-1 {
     left: 8.33333%; }
-
   .push-xl-2 {
     left: 16.66667%; }
-
   .push-xl-3 {
     left: 25%; }
-
   .push-xl-4 {
     left: 33.33333%; }
-
   .push-xl-5 {
     left: 41.66667%; }
-
   .push-xl-6 {
     left: 50%; }
-
   .push-xl-7 {
     left: 58.33333%; }
-
   .push-xl-8 {
     left: 66.66667%; }
-
   .push-xl-9 {
     left: 75%; }
-
   .push-xl-10 {
     left: 83.33333%; }
-
   .push-xl-11 {
     left: 91.66667%; }
-
   .push-xl-12 {
     left: 100%; }
-
   .offset-xl-0 {
     margin-left: 0%; }
-
   .offset-xl-1 {
     margin-left: 8.33333%; }
-
   .offset-xl-2 {
     margin-left: 16.66667%; }
-
   .offset-xl-3 {
     margin-left: 25%; }
-
   .offset-xl-4 {
     margin-left: 33.33333%; }
-
   .offset-xl-5 {
     margin-left: 41.66667%; }
-
   .offset-xl-6 {
     margin-left: 50%; }
-
   .offset-xl-7 {
     margin-left: 58.33333%; }
-
   .offset-xl-8 {
     margin-left: 66.66667%; }
-
   .offset-xl-9 {
     margin-left: 75%; }
-
   .offset-xl-10 {
     margin-left: 83.33333%; }
-
   .offset-xl-11 {
     margin-left: 91.66667%; } }
+
 body {
   margin: 0px;
   width: 100%;
@@ -1089,33 +850,33 @@ body {
 @media (min-width: 396px) {
   .margin-xs-left > *:first-child, .margin-xs > *:first-child {
     margin-left: 0.9125rem; }
-
   .margin-xs-right > *:last-child, .margin-xs > *:last-child {
     margin-right: 0.9125rem; } }
+
 @media (min-width: 576px) {
   .margin-sm-left > *:first-child, .margin-sm > *:first-child {
     margin-left: 0.9125rem; }
-
   .margin-sm-right > *:last-child, .margin-sm > *:last-child {
     margin-right: 0.9125rem; } }
+
 @media (min-width: 768px) {
   .margin-md-left > *:first-child, .margin-md > *:first-child {
     margin-left: 0.9125rem; }
-
   .margin-md-right > *:last-child, .margin-md > *:last-child {
     margin-right: 0.9125rem; } }
+
 @media (min-width: 992px) {
   .margin-lg-left > *:first-child, .margin-lg > *:first-child {
     margin-left: 0.9125rem; }
-
   .margin-lg-right > *:last-child, .margin-lg > *:last-child {
     margin-right: 0.9125rem; } }
+
 @media (min-width: 1200px) {
   .margin-xl-left > *:first-child, .margin-xl > *:first-child {
     margin-left: 0.9125rem; }
-
   .margin-xl-right > *:last-child, .margin-xl > *:last-child {
     margin-right: 0.9125rem; } }
+
 input {
   line-height: 1.3;
   border-radius: 12px;
@@ -1123,7 +884,12 @@ input {
   background: none;
   margin: 5px 0px; }
 
-input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password] {
+input[type=search],
+input[type=submit],
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password] {
   padding: 1px 8px 2px; }
 
 input.button {
@@ -1135,11 +901,11 @@ input.button {
   margin-top: 20px;
   margin-bottom: 20px; }
 
-#search-block-form input {
+.search-block-form input {
   line-height: 2;
   border-radius: 25px;
   margin: 5px 10px; }
-  #search-block-form input[type=search], #search-block-form input[type=submit] {
+  .search-block-form input[type=search], .search-block-form input[type=submit] {
     padding: 5px 15px; }
 
 div#block-bluerain-local-tasks {
@@ -1171,6 +937,7 @@ div#edit-body-wrapper .field-edit-link button {
   cursor: pointer;
   color: #0275d8;
   font-weight: 700; }
+
 div#edit-body-wrapper textarea {
   min-width: 150px;
   height: 200px;
@@ -1203,101 +970,106 @@ header {
     color: #eceeef; }
     header nav > h2 {
       display: none; }
-    header nav ul, header nav ol {
+    header nav ul,
+    header nav ol {
       list-style: none;
       padding: 5px 0px;
       margin: 0px auto 0px;
       text-align: right; }
-      header nav ul li, header nav ol li {
+      header nav ul li,
+      header nav ol li {
         display: inline-block;
         margin-right: 10px;
         padding-right: 10px;
         border-right: 1px solid #818a91; }
-        header nav ul li:last-child, header nav ol li:last-child {
+        header nav ul li:last-child,
+        header nav ol li:last-child {
           margin: 0px;
           padding: 0px;
           border: none; }
-        header nav ul li a, header nav ol li a {
+        header nav ul li a,
+        header nav ol li a {
           color: inherit;
           text-decoration: none; }
-          header nav ul li a:hover, header nav ol li a:hover {
+          header nav ul li a:hover,
+          header nav ol li a:hover {
             font-weight: 900;
             text-decoration: none;
             letter-spacing: -0.4px;
             color: inherit; }
 
-#block-bluerain-branding {
+.logo-search .logo > div {
   max-height: 300px;
   padding: 0px 10px 0px 0px; }
-  #block-bluerain-branding a {
+  .logo-search .logo > div a {
     color: header-bg; }
-    #block-bluerain-branding a img {
+    .logo-search .logo > div a img {
       max-height: 285px;
       min-height: 35px; }
-    #block-bluerain-branding a:hover {
+    .logo-search .logo > div a:hover {
       color: header-bg;
       text-decoration: none; }
-    #block-bluerain-branding a ~ a {
+    .logo-search .logo > div a ~ a {
       display: none; }
 
-#block-bluerain-search {
+.logo-search .search > div {
   padding: 5px 10px 10px; }
-  #block-bluerain-search h2 {
+  .logo-search .search > div h2 {
     display: none; }
-  #block-bluerain-search form {
+  .logo-search .search > div form {
     text-align: right; }
-    #block-bluerain-search form div {
+    .logo-search .search > div form div {
       display: inline; }
-      #block-bluerain-search form div input {
+      .logo-search .search > div form div input {
         text-align: left; }
-      #block-bluerain-search form div input[type=search] {
+      .logo-search .search > div form div input[type=search] {
         width: 150px; }
-        #block-bluerain-search form div input[type=search]:focus {
+        .logo-search .search > div form div input[type=search]:focus {
           width: 250px;
           -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc;
           -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc;
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc; }
-      #block-bluerain-search form div input[type=submit] {
+      .logo-search .search > div form div input[type=submit] {
         display: none; }
 
-nav#block-bluerain-main-menu > ul, nav#block-bluerain-main-menu > ol {
+div#main-navbar nav > ul, div#main-navbar nav > ol {
   list-style: none;
   padding-right: -30px;
   padding-left: 0px;
   margin: 0px auto; }
-  nav#block-bluerain-main-menu > ul > li, nav#block-bluerain-main-menu > ul > li.active, nav#block-bluerain-main-menu > ol > li, nav#block-bluerain-main-menu > ol > li.active {
+  div#main-navbar nav > ul > li, div#main-navbar nav > ul > li.active, div#main-navbar nav > ol > li, div#main-navbar nav > ol > li.active {
     display: inline-block;
     position: relative;
     padding: 15px 0px;
     margin-right: 30px; }
-    nav#block-bluerain-main-menu > ul > li:hover > a, nav#block-bluerain-main-menu > ul > li.active:hover > a, nav#block-bluerain-main-menu > ol > li:hover > a, nav#block-bluerain-main-menu > ol > li.active:hover > a {
+    div#main-navbar nav > ul > li:hover > a, div#main-navbar nav > ul > li.active:hover > a, div#main-navbar nav > ol > li:hover > a, div#main-navbar nav > ol > li.active:hover > a {
       color: #fff;
       text-decoration: inherit;
       -moz-box-shadow: 0px -2px 0px #fff inset;
       -webkit-box-shadow: 0px -2px 0px #fff inset;
       box-shadow: 0px -2px 0px #fff inset; }
-    nav#block-bluerain-main-menu > ul > li a, nav#block-bluerain-main-menu > ul > li.active a, nav#block-bluerain-main-menu > ol > li a, nav#block-bluerain-main-menu > ol > li.active a {
+    div#main-navbar nav > ul > li a, div#main-navbar nav > ul > li.active a, div#main-navbar nav > ol > li a, div#main-navbar nav > ol > li.active a {
       padding: 13px 0px 15px;
       color: #f7f7f9;
       text-decoration: none; }
-    nav#block-bluerain-main-menu > ul > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > a:after {
+    div#main-navbar nav > ul > li.dropdown > a:after, div#main-navbar nav > ul > li.active.dropdown > a:after, div#main-navbar nav > ol > li.dropdown > a:after, div#main-navbar nav > ol > li.active.dropdown > a:after {
       font-family: "FontAwesome";
       content: " \f0d7";
       color: #f7f7f9; }
-    nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu {
+    div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu {
       top: 50px;
       left: 0px;
       z-index: 500; }
-      nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after {
+      div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li.dropdown > a:after, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li.active.dropdown > a:after, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li.dropdown > a:after, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li.active.dropdown > a:after {
         font-family: "FontAwesome";
         content: " \f0da";
         color: #eceeef; }
-      nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active > a, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li > a, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active > a {
+      div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li > a, div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li.active > a, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li > a, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li.active > a, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li > a, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li.active > a, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li > a, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li.active > a {
         color: #eceeef; }
-        nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ul > li.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown > ul.dropdown-menu > li.active > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown > ul.dropdown-menu > li.active > a:hover {
+        div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li > a:hover, div#main-navbar nav > ul > li.dropdown > ul.dropdown-menu > li.active > a:hover, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li > a:hover, div#main-navbar nav > ul > li.active.dropdown > ul.dropdown-menu > li.active > a:hover, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li > a:hover, div#main-navbar nav > ol > li.dropdown > ul.dropdown-menu > li.active > a:hover, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li > a:hover, div#main-navbar nav > ol > li.active.dropdown > ul.dropdown-menu > li.active > a:hover {
           box-shadow: none;
           color: #f7f7f9; }
-    nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu {
+    div#main-navbar nav > ul > li.dropdown ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu {
       display: none;
       list-style: none;
       position: absolute;
@@ -1305,41 +1077,41 @@ nav#block-bluerain-main-menu > ul, nav#block-bluerain-main-menu > ol {
       padding: 0px;
       background-color: #373a3c;
       color: #eceeef; }
-      nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active {
+      div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active {
         border-top: 1px #818a91 solid;
         padding: 10px 10px;
         width: 180px; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active:last-child, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li:last-child, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active:last-child {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li:last-child, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active:last-child, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li:last-child, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active:last-child, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li:last-child, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active:last-child, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li:last-child, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active:last-child {
           border-bottom: 1px #818a91 solid; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active:hover {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li:hover, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active:hover, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li:hover, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active:hover, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li:hover, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active:hover, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li:hover, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active:hover {
           color: #f7f7f9;
           background: #55595c; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.dropdown > a:after, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.dropdown > a:after, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active.dropdown > a:after, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.dropdown > a:after, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown > a:after {
           font-family: "FontAwesome";
           content: " \f0da";
           color: #eceeef; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.dropdown ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown ul.dropdown-menu {
           border-left: 5px #818a91 solid; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active.dropdown:hover > ul.dropdown-menu {
           display: block;
           left: 200px;
           top: 0px; }
-        nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active > a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li > a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active > a {
+        div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li > a, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active > a, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li > a, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active > a, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li > a, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active > a, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li > a, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active > a {
           color: #eceeef; }
-          nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ul > li.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ol > li.dropdown ul.dropdown-menu li.active > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li > a:hover, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active > a:hover {
+          div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li > a:hover, div#main-navbar nav > ul > li.dropdown ul.dropdown-menu li.active > a:hover, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li > a:hover, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active > a:hover, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li > a:hover, div#main-navbar nav > ol > li.dropdown ul.dropdown-menu li.active > a:hover, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li > a:hover, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active > a:hover {
             box-shadow: none;
             color: #f7f7f9; }
-    nav#block-bluerain-main-menu > ul > li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ul > li.active.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.dropdown:hover > ul.dropdown-menu, nav#block-bluerain-main-menu > ol > li.active.dropdown:hover > ul.dropdown-menu {
+    div#main-navbar nav > ul > li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ul > li.active.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.dropdown:hover > ul.dropdown-menu, div#main-navbar nav > ol > li.active.dropdown:hover > ul.dropdown-menu {
       display: block; }
-  nav#block-bluerain-main-menu > ul > li.active > a, nav#block-bluerain-main-menu > ol > li.active > a {
+  div#main-navbar nav > ul > li.active > a, div#main-navbar nav > ol > li.active > a {
     -moz-box-shadow: 0px -1px 0px #f7f7f9 inset;
     -webkit-box-shadow: 0px -1px 0px #f7f7f9 inset;
     box-shadow: 0px -1px 0px #f7f7f9 inset; }
-  nav#block-bluerain-main-menu > ul > li.active > a.is-active, nav#block-bluerain-main-menu > ol > li.active > a.is-active {
+  div#main-navbar nav > ul > li.active > a.is-active, div#main-navbar nav > ol > li.active > a.is-active {
     color: #f7f7f9; }
-  nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active {
+  div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active {
     background-color: #373a3c; }
-    nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active a, nav#block-bluerain-main-menu > ul > li.active.dropdown ul.dropdown-menu li.active a.is-active, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active a, nav#block-bluerain-main-menu > ol > li.active.dropdown ul.dropdown-menu li.active a.is-active {
+    div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active a, div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active a.is-active, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active a, div#main-navbar nav > ol > li.active.dropdown ul.dropdown-menu li.active a.is-active {
       color: #f7f7f9; }
 
 #main-navbar {
@@ -1360,23 +1132,26 @@ nav#block-bluerain-main-menu > ul, nav#block-bluerain-main-menu > ol {
 main article img {
   max-width: 100%;
   height: auto; }
+
 @media (min-width: 768px) {
   main div.maincontent.col-xl-8 > div, main div.maincontent.col-md-6 > div {
     margin-left: 0.9125rem;
     margin-right: 0.9125rem; } }
+
 @media (min-width: 576px) {
   main div.maincontent.col-lg-9.push-lg-3 > div, main div.maincontent.col-sm-8.push-sm-4 > div {
     margin-left: 0.9125rem;
     margin-right: 0rem; } }
+
 @media (min-width: 576px) {
   main div.maincontent.col-lg-9 > div, main div.maincontent.col-sm-8 > div {
     margin-right: 0.9125rem; } }
 
 .sidebar-left {
-  z-index: -5; }
+  z-index: 5; }
 
 .sidebar-right {
-  z-index: -5; }
+  z-index: 5; }
 
 .breadcrumb {
   padding: 0.75rem 0px;
@@ -1431,5 +1206,3 @@ footer.pagefooter {
         border-top: 2px #55595c solid; }
       footer.pagefooter nav ul li:last-child {
         border-bottom: 2px #55595c solid; }
-
-/*# sourceMappingURL=main.css.map */

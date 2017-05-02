@@ -2,10 +2,11 @@ header {
   background-color: $header-bg;
   position: static;
   nav {
-    > h2 {
+    >h2 {
       display: none;
     }
-    ul, ol {
+    ul,
+    ol {
       list-style: none;
       padding: 5px 0px;
       margin: 0px auto 0px;
@@ -50,7 +51,8 @@ header {
     }
   }
 }
-#block-bluerain-branding {
+
+.logo-search .logo>div {
   max-height: 300px;
   padding: 0px 10px 0px 0px;
   a {
@@ -68,7 +70,8 @@ header {
     }
   }
 }
-#block-bluerain-search {
+
+.logo-search .search>div {
   padding: 5px 10px 10px;
   h2 {
     display: none;
@@ -84,7 +87,7 @@ header {
         width: 150px;
         &:focus {
           width: 250px;
-          @include box-shadows(0px 1px 1px rgba(0,0,0,0.075) inset, 0px 0px 8px $brand-primary);
+          @include box-shadows(0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px $brand-primary);
         }
       }
       input[type=submit] {

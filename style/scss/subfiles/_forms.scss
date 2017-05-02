@@ -6,30 +6,40 @@ input {
   background: none;
   margin: 5px 0px;
 }
-input[type=search], input[type=submit], input[type=text], input[type=number], input[type=email], input[type=password]{
+
+input[type=search],
+input[type=submit],
+input[type=text],
+input[type=number],
+input[type=email],
+input[type=password] {
   padding: 1px 8px 2px;
 }
+
 input[type=file] {
   // continue here
 }
+
 input.button {
   line-height: 1.5;
   border-radius: 17px;
   padding: 3px 12px;
 }
+
 .form-item {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-// Specific Locations
 
+// Specific Locations
 // Searchbar
-#search-block-form {
+.search-block-form {
   input {
     line-height: 2;
     border-radius: 25px;
     margin: 5px 10px;
-    &[type=search], &[type=submit] {
+    &[type=search],
+    &[type=submit] {
       padding: 5px 15px;
     }
   }
@@ -46,7 +56,7 @@ div#block-bluerain-local-tasks {
     width: 100%;
     border-bottom: 1px $gray-dark solid;
     li {
-      padding:5px 10px 0px 10px;
+      padding: 5px 10px 0px 10px;
       display: inline-block;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
@@ -65,6 +75,7 @@ div#block-bluerain-local-tasks {
     }
   }
 }
+
 //Edit Forms
 div#edit-body-wrapper {
   .field-edit-link button {
@@ -78,15 +89,17 @@ div#edit-body-wrapper {
     min-width: 150px;
     height: 200px;
     resize: vertical;
-    @each $breakpoint, $width in $container-max-widths {
-      @if $breakpoint != "xxs" {
-        @include media-breakpoint-up($breakpoint){
+    @each $breakpoint,
+    $width in $container-max-widths {
+      @if $breakpoint !="xxs" {
+        @include media-breakpoint-up($breakpoint) {
           width: $width - 6px;
         }
       }
     }
   }
 }
+
 input#edit-field-image-0-remove-button {
-    cursor: not-allowed;
-  }
+  cursor: not-allowed;
+}
