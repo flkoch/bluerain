@@ -2,10 +2,10 @@ global-styling:
   version: 1.x
   css:
     theme:
-      style/css/main.css: { media: screen }
-      style/css/print.css: { media: print }
+      style/css/main.min.css: { media: screen }
+      style/css/print.min.css: { media: print }
   js:
     theme:
-      js/main.js: {}
+      js/main.min.js: {}
   dependencies:
     - core/jquery

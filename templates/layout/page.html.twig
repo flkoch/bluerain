@@ -32,6 +32,7 @@
  * - page.logo:  Logo Position
  * - page.searchbar:   Search bar
  * - page.primary_menu:  Main Menu
+ * - page.language_switcher: Language Switcher
  * - page.secondary_menu: Side Menu (currently not active)
  * - page.off_canvas:  Off Canvas (currently not active)
  * - page.highlighted:   Main Topic
@@ -71,8 +72,14 @@
     {% endif %}
   </header>
   {% endif %}
-
-  {{ page.primary_menu }}
+{% if page.primary_menu or page.language_switcher %}
+  <div id="main-navbar">
+    <div class="container">
+        {{ page.primary_menu }}
+        {{ page.language_switcher }}
+    </div>
+  </div>
+{% endif %}
 
   {{ page.highlighted }}
 
