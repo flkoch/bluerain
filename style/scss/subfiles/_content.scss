@@ -1,25 +1,29 @@
 main{
-  // Admin tools
-  div#block-bluerain-local-tasks {
-    display: block;
-    clear: both;
-    ul {
-      list-style: none;
-      float: left;
-      padding: 0px;
-      clear: both;
-      width: 100%;
-      li {
-        padding:5px 10px 0px 10px;
-        display: inline;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        border-top: 1px $gray-dark solid;
-        border-right: 1px $gray-dark solid;
-        border-left: 1px $gray-dark solid;
-        margin-right: 15px;
-        a.is-active {
-          color: $gray;
+  article img { // no overflow of images, retain proportion
+    max-width: 100%;
+    height: auto;
+  }
+  div.maincontent {
+    &.col-xl-8, &.col-md-6 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints,"md")) {
+          margin-left: $grid-width;
+          margin-right: $grid-width;
+        }
+      }
+    }
+    &.col-lg-9.push-lg-3, &.col-sm-8.push-sm-4 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin-left: $grid-width;
+          margin-right: 0rem;
+        }
+      }
+    }
+    &.col-lg-9, &.col-sm-8 {
+      >div {
+        @media (min-width: map-get($grid-breakpoints, "sm")) {
+          margin-right: $grid-width;
         }
       }
     }
