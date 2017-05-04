@@ -58,9 +58,10 @@ div#main-navbar nav {
           background-color: $main-menu-dropdown-bg;
           color: $main-menu-dropdown-color;
           li, li.active {
-            border-top: 1px $main-menu-dropdown-devider solid;
-            padding: 10px 10px;
-            width: $dropdown-menu-width - (2 * 10px);
+            border-top: $dropdown-menu-border-top-width $main-menu-dropdown-devider solid;
+            padding: $dropdown-menu-item-padding-top $dropdown-menu-item-padding-right $dropdown-menu-item-padding-bottom $dropdown-menu-item-padding-left;
+            width: $dropdown-menu-width - ($dropdown-menu-item-padding-left + $dropdown-menu-item-padding-right);
+            position: relative;
             &:last-child {
               border-bottom: 1px $main-menu-dropdown-devider solid;
             }
@@ -80,7 +81,7 @@ div#main-navbar nav {
               &:hover > ul.dropdown-menu {
                 display: block;
                 left: $dropdown-menu-width;
-                top: 0px;
+                top: -$dropdown-menu-border-top-width;
               }
             }
             > a {
