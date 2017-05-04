@@ -39,6 +39,7 @@ Thumbs.db
 # Development files #
 #####################
 *.css.map
+*.js.map
 koala-config.json
 package.json
 Gruntfile.js
