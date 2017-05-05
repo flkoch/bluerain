@@ -4,12 +4,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-zip');
+  grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     concat: {
       js: {
-        src: 'js/modules/*.js',
-        dest: 'js/main.js',
+        src: 'development/js/modules/**.js',
+        dest: 'development/js/main.js',
       },
     },
     uglify: {
@@ -19,7 +20,7 @@ module.exports = function(grunt) {
           sourceMap: true,
         },
         src: '<%= concat.js.dest %>',
-        dest: 'js/main.min.js',
+        dest: 'build/bluerain/js/main.min.js',
       },
     },
     sass: {
@@ -30,9 +31,9 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'style/scss',
+          cwd: 'development/style/scss',
           src: ['**.scss'],
-          dest: 'style/css/',
+          dest: 'development/style/css/',
           ext: '.css',
         }],
       },
@@ -43,37 +44,49 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          cwd: 'style/scss',
+          cwd: 'development/style/scss',
           src: ['**.scss'],
-          dest: 'style/css/',
+          dest: 'build/bluerain/style/css/',
           ext: '.min.css',
         }],
       },
     },
     watch: {
       scripts: {
-        files: ['js/modules/**.js'],
+        files: ['development/js/modules/**.js'],
         tasks: ['concat:js', 'uglify'],
         options: {
           spawn: false,
         },
       },
       css: {
-        files: ['style/scss/**.scss', 'style/scss/subfiles/_**.scss'],
-        tasks: ['sass:dev'],
+        files: ['development/style/scss/**.scss', 'development/style/scss/subfiles/_**.scss'],
+        tasks: ['sass'],
+      },
+    },
+    copy: {
+      build: {
+        expand: true,
+        cwd: 'development',
+        src: ['config/**', 'dependencies/**', 'images/**', 'js/*.js', 'style/**', 'templates/**', '*'],
+        dest: 'build/bluerain/',
       },
     },
     zip: {
       theme: {
-        src: ['dependencies/fontawesome/**', 'dependencies/bootstrap/js/*.js', 'images/**', 'js/*.min.js', 'style/css/**.min.css', 'templates/**', 'bluerain.*.yml', 'logo.svg'],
-        dest: 'installer/<%= pkg.name %>_v<%= pkg.version %>.zip',
+        expand: true,
+        cwd: 'build',
+        src: 'bluerain/**',
+        dest: 'build/<%= pkg.name %>_v<%= pkg.version %>.zip',
       },
-      dev: {
-        src: ['dependencies/**', 'images/**', 'js/**', 'style/**', 'templates/**', 'bluerain.*.yml', 'logo.svg'],
-        dest: 'installer/<%= pkg.name %>_v<%= pkg.version %>.dev.zip',
+      minimal: {
+        expand: true,
+        cwd: 'build',
+        src: ['bluerain/config/**', 'bluerain/dependencies/fontawesome/fonts/*', 'bluerain/dependencies/bootstrap/js/*.js', 'bluerain/images/**', 'bluerain/js/*.min.js', 'bluerain/style/css/*.min.css', 'bluerain/templates/**.twig.html', 'bluerain/*.yml', 'bluerain/*.theme', 'bluerain/*.php', 'bluerain/logo.svg'],
+        dest: 'build/<%= pkg.name %>_minimal_v<%= pkg.version %>.zip',
       },
     },
   });
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'zip']);
+  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'copy', 'zip']);
 }
