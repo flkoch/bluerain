@@ -41,14 +41,14 @@ header {
   }
   .logo-search {
     @extend .container;
-    .logo {
-      @extend .col-lg-8;
-      @extend .col-xxs-12;
-    }
-    .search {
-      @extend .col-lg-4;
-      @extend .col-xxs-12;
-    }
+    // .logo {
+    //   @extend .col-lg-8;
+    //   @extend .col-xxs-12;
+    // }
+    // .search {
+    //   @extend .col-lg-4;
+    //   @extend .col-xxs-12;
+    // }
   }
 }
 
@@ -60,9 +60,9 @@ header {
       max-height: 285px;
       min-height: 35px;
     }
-    color: header-bg;
+    color: $header-bg;
     &:hover {
-      color: header-bg;
+      color: $header-bg;
       text-decoration: none;
     }
     &~a {

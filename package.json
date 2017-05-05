@@ -1,0 +1,15 @@
+{
+  "name": "bluerain",
+  "version": "0.1.0",
+  "description": "A custom theme for drupal 8.x",
+  "author": "Florian Koch",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0",
+    "grunt-zip": "^0.17.1"
+  }
+}

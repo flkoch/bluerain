@@ -59,16 +59,22 @@
   {% if page.header_menu or page.logo or page.searchbar %}
   <header role="banner">
     {{ page.header_menu }}
-    {% if page.logo and page.searchbar %}
+    {% if page.logo or page.searchbar %}
       <div class="logo-search">
         <div class="row">
-          {{ page.logo }}
-          {{ page.searchbar }}
+          variable: {{ show_theme_bar }}
+          {% if page.searchbar %}
+            {{ page.logo }}
+          {% else %}
+            {{ page.logo }}
+          {% endif %}
+          {% if page.logo %}
+            {{ page.searchbar.add('col-lg-4') }}
+          {% else %}
+            {{ page.searchbar }}
+          {% endif %}
         </div>
       </div>
-    {% elseif page.logo or page.searchbar %}
-      {{ page.logo }}
-      {{ page.searchbar }}
     {% endif %}
   </header>
   {% endif %}
