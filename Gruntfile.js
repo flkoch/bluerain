@@ -74,15 +74,13 @@ module.exports = function(grunt) {
     },
     zip: {
       theme: {
-        expand: true,
-        cwd: 'build',
-        src: 'bluerain/**',
+        cwd: 'build/',
+        src: 'build/bluerain/**',
         dest: 'build/<%= pkg.name %>_v<%= pkg.version %>.zip',
       },
       minimal: {
-        expand: true,
-        cwd: 'build',
-        src: ['bluerain/config/**', 'bluerain/dependencies/fontawesome/fonts/*', 'bluerain/dependencies/bootstrap/js/*.js', 'bluerain/images/**', 'bluerain/js/*.min.js', 'bluerain/style/css/*.min.css', 'bluerain/templates/**.twig.html', 'bluerain/*.yml', 'bluerain/*.theme', 'bluerain/*.php', 'bluerain/logo.svg'],
+        cwd: 'build/',
+        src: ['build/bluerain/config/**', 'build/bluerain/dependencies/fontawesome/fonts/*', 'build/bluerain/dependencies/bootstrap/js/*.js', 'build/bluerain/images/**', 'build/bluerain/js/*.min.js', 'build/bluerain/style/css/*.min.css', 'build/bluerain/templates/**.twig.html', 'build/bluerain/*.yml', 'build/bluerain/*.theme', 'build/bluerain/*.php', 'build/bluerain/logo.svg'],
         dest: 'build/<%= pkg.name %>_minimal_v<%= pkg.version %>.zip',
       },
     },

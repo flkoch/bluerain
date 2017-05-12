@@ -1,0 +1,31 @@
+name: Blue Rain
+type: theme
+description: A custom build theme with mobile layout support.
+core: 8.x
+libraries:
+    - bluerain/global-styling
+libraries-override:
+
+regions:
+    header_menu: Headmenu
+    logo: Logo Position
+    searchbar: Search bar
+    primary_menu: Main Menu
+    language_switcher: Language Switcher
+    # secondary_menu: Side Menu
+    # off_canvas: Off Canvas
+    highlighted: Main Topic
+    messages: Messages
+    content: Content
+    sidebar_first: Left Sidebar
+    sidebar_second: Right Sidebar
+    col_1: First Column
+    col_2: Second Column
+    col_3: Third Column
+    col_4: Fourth Column
+    col_5: Fifth Column
+    col_6: Sixth Column
+    breadcrumb: Breadcrumbs
+    footer: Footer
+    footer_menu: Footer Menu
+    credits: Credits

@@ -1,0 +1,98 @@
+header {
+  background-color: $header-bg;
+  position: static;
+  nav {
+    >h2 {
+      display: none;
+    }
+    ul,
+    ol {
+      list-style: none;
+      padding: 5px 0px;
+      margin: 0px auto 0px;
+      @extend .container;
+      text-align: right;
+      li {
+        // float: right;
+        display: inline-block;
+        margin-right: 10px;
+        padding-right: 10px;
+        border-right: 1px solid $gray-light;
+        &:last-child {
+          margin: 0px;
+          padding: 0px;
+          border: none;
+        }
+        a {
+          color: inherit;
+          text-decoration: none;
+          &:hover {
+            font-weight: 900;
+            text-decoration: none;
+            letter-spacing: -0.4px;
+            color: inherit;
+          }
+        }
+      }
+    }
+    width: 100%;
+    background-color: $header-nav-bg;
+    color: $header-nav-color;
+  }
+  .logo-search {
+    @extend .container;
+    // .logo {
+    //   @extend .col-lg-8;
+    //   @extend .col-xxs-12;
+    // }
+    // .search {
+    //   @extend .col-lg-4;
+    //   @extend .col-xxs-12;
+    // }
+  }
+}
+
+.logo-search .logo>div {
+  max-height: 300px;
+  padding: 0px 10px 0px 0px;
+  a {
+    img {
+      max-height: 285px;
+      min-height: 35px;
+    }
+    color: $header-bg;
+    &:hover {
+      color: $header-bg;
+      text-decoration: none;
+    }
+    &~a {
+      display: none;
+    }
+  }
+}
+
+.logo-search .search>div {
+  padding: 5px 10px 10px;
+  h2 {
+    display: none;
+  }
+  form {
+    text-align: right;
+    div {
+      display: inline;
+      input {
+        text-align: left;
+      }
+      input[type=search] {
+        width: 150px;
+        &:focus {
+          width: 250px;
+          @include box-shadows(0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px $brand-primary);
+        }
+      }
+      input[type=submit] {
+        display: none;
+      }
+    }
+  }
+}

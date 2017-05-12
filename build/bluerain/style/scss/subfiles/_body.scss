@@ -1,0 +1,46 @@
+body {
+  margin: 0px; // make the body extend right to the edge of the window
+  width: 100%;
+  background-color: $footer-bg;
+  // General Link layout
+  a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    &:hover {
+      text-decoration: $link-hover-decoration;
+      color: $link-hover-color;
+    }
+  }
+  p {
+    text-align: justify;
+    margin: 0px 0px 16px 0px;
+  }
+}
+.layout-container {
+  background-color: $body-bg; // background for normal blocks
+  color: $body-color; // color for regular text
+}
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint){
+    .margin-#{$breakpoint}-left {
+      >*:first-child {
+        margin-left: $grid-width;
+      }
+    }
+    .margin-#{$breakpoint}-right {
+      >*:last-child {
+        margin-right: $grid-width;
+      }
+    }
+    .margin-#{$breakpoint} {
+      @extend .margin-#{$breakpoint}-left;
+      @extend .margin-#{$breakpoint}-right;
+    }
+  }
+}
+@media screen and (max-width: 396px) {
+  .container {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
