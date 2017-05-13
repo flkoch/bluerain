@@ -122,35 +122,52 @@ div#main-navbar {
       }
     }
   }
+  div.language-switcher-language-url {
+    float: right;
+    ul.language-switcher-links{
+      @extend %language-switcher-links-class;
+    }
+  }
 }
+ul%language-switcher-links-class {
+  text-align: right;
+  padding-left: 30px;
+  >li {
+    border-right: 1px darken($main-menu-color,20%) solid;
+    &:last-child {
+      border: none;
+    }
+    a.language-link {
+      color: darken($main-menu-color,10%);
+      &:hover {
+        color: $main-menu-hover-color;
+      }
+      &.is-active:hover {
+        color: darken($main-menu-color,10%);
+      }
+    }
+  }
+}
+
 div.language-switcher-language-url {
-  float: right;
   ul.language-switcher-links {
     margin: auto 0px;
-    padding-left: 30px;
-    text-align: right;
+    padding-left: 0px;
     >li {
       list-style: none;
       display: inline-block;
       padding: 0px 5px;
       margin: 10px 0px;
-      border-right: 1px darken($main-menu-color,20%) solid;
+      border-right: 1px darken($body-color,20%) solid;
       &:last-child {
         border: none;
       }
-      a {
-        color: darken($main-menu-color,10%);
+      a.language-link {
+        color: $body-color;
         &:hover {
-          color: $main-menu-hover-color;
           text-decoration: none;
         }
       }
-      // &.en>a {
-      //   content: "EN"
-      // }
-      // &.de>a {
-      //   content: "DE"
-      // }
     }
   }
 }

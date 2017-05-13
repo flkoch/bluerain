@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .container, header nav ul,
-header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
   margin-left: auto;
   margin-right: auto;
   padding-left: 0rem;
@@ -9,35 +9,35 @@ header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs 
 
 @media (min-width: 396px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
     max-width: 378px;
   }
 }
 
 @media (min-width: 576px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
     max-width: 544px;
   }
 }
 
 @media (min-width: 768px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
     max-width: 940px;
   }
 }
 
 @media (min-width: 1200px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
     max-width: 1140px;
   }
 }
@@ -4281,9 +4281,9 @@ body p {
 
 @media screen and (max-width: 396px) {
   .container, header nav ul,
-  header nav ol, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
-    padding-left: 5px;
-    padding-right: 5px;
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -4410,7 +4410,7 @@ header {
   position: static;
 }
 
-header nav {
+header #header-menu {
   width: 100%;
   background-color: #373a3c;
   color: #eceeef;
@@ -4457,6 +4457,65 @@ header nav ol li a:hover {
   color: inherit;
 }
 
+header div.language-switcher-language-url ul.language-switcher-links > li {
+  margin: 5px 0px;
+}
+
+@media (max-width: 575px) {
+  header .logo-search .search .search-block-form form .input-group {
+    display: flex;
+  }
+  header .logo-search .search .search-block-form form .input-group input {
+    flex: 1 1 150px;
+  }
+  header .logo-search .search .search-block-form form .input-group span {
+    flex: 0 0 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+@media (min-width: 576px) {
+  header .logo-search {
+    display: flex;
+  }
+  header .logo-search > .logo, header .logo-search > .search {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-flow: row wrap;
+  }
+  header .logo-search .logo:last-child {
+    flex-basis: 100%;
+  }
+  header .logo-search .search:first-child {
+    flex-basis: 100%;
+  }
+  header .logo-search .logo {
+    flex-basis: 100%;
+  }
+  header .logo-search .search {
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  header .logo-search .logo {
+    flex-basis: 65%;
+  }
+  header .logo-search .search {
+    flex-basis: 35%;
+  }
+}
+
+@media (min-width: 1200px) {
+  header .logo-search .logo {
+    flex-basis: 70%;
+  }
+  header .logo-search .search {
+    flex-basis: 30%;
+  }
+}
+
 .logo-search .logo > div {
   max-height: 300px;
   padding: 0px 10px 0px 0px;
@@ -4500,12 +4559,25 @@ header nav ol li a:hover {
   text-align: left;
 }
 
-.logo-search .search > div form div input[type=search] {
-  width: 150px;
+@media (min-width: 576px) {
+  .logo-search .search > div form div input[type=search] {
+    width: 150px;
+  }
+  .logo-search .search > div form div input[type=search]:focus {
+    width: 215px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-search .search > div form div input[type=search] {
+    width: 150px;
+  }
+  .logo-search .search > div form div input[type=search]:focus {
+    width: 250px;
+  }
 }
 
 .logo-search .search > div form div input[type=search]:focus {
-  width: 250px;
   -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc;
@@ -4650,14 +4722,38 @@ div#main-navbar nav > ul > li.active.dropdown ul.dropdown-menu li.active a, div#
   color: #f7f7f9;
 }
 
-div.language-switcher-language-url {
+div#main-navbar div.language-switcher-language-url {
   float: right;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links, div#main-navbar div.language-switcher-language-url ul.language-switcher-links {
+  text-align: right;
+  padding-left: 30px;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links > li, div#main-navbar div.language-switcher-language-url ul.language-switcher-links > li {
+  border-right: 1px #bdbdcd solid;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links > li:last-child, div#main-navbar div.language-switcher-language-url ul.language-switcher-links > li:last-child {
+  border: none;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links > li a.language-link, div#main-navbar div.language-switcher-language-url ul.language-switcher-links > li a.language-link {
+  color: #dadae3;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links > li a.language-link:hover, div#main-navbar div.language-switcher-language-url ul.language-switcher-links > li a.language-link:hover {
+  color: #fff;
+}
+
+header div.language-switcher-language-url ul.language-switcher-links > li a.language-link.is-active:hover, div#main-navbar div.language-switcher-language-url ul.language-switcher-links > li a.language-link.is-active:hover {
+  color: #dadae3;
 }
 
 div.language-switcher-language-url ul.language-switcher-links {
   margin: auto 0px;
-  padding-left: 30px;
-  text-align: right;
+  padding-left: 0px;
 }
 
 div.language-switcher-language-url ul.language-switcher-links > li {
@@ -4665,19 +4761,18 @@ div.language-switcher-language-url ul.language-switcher-links > li {
   display: inline-block;
   padding: 0px 5px;
   margin: 10px 0px;
-  border-right: 1px #bdbdcd solid;
+  border-right: 1px #060707 solid;
 }
 
 div.language-switcher-language-url ul.language-switcher-links > li:last-child {
   border: none;
 }
 
-div.language-switcher-language-url ul.language-switcher-links > li a {
-  color: #dadae3;
+div.language-switcher-language-url ul.language-switcher-links > li a.language-link {
+  color: #373a3c;
 }
 
-div.language-switcher-language-url ul.language-switcher-links > li a:hover {
-  color: #fff;
+div.language-switcher-language-url ul.language-switcher-links > li a.language-link:hover {
   text-decoration: none;
 }
 
@@ -4697,6 +4792,19 @@ div.language-switcher-language-url ul.language-switcher-links > li a:hover {
 main article img {
   max-width: 100%;
   height: auto;
+}
+
+main article h1 a, main article h2 a, main article h3 a, main article h4 a, main article h5 a, main article h6 a {
+  color: inherit;
+}
+
+main article h1 a:hover, main article h1 a:active, main article h1 a:visited, main article h2 a:hover, main article h2 a:active, main article h2 a:visited, main article h3 a:hover, main article h3 a:active, main article h3 a:visited, main article h4 a:hover, main article h4 a:active, main article h4 a:visited, main article h5 a:hover, main article h5 a:active, main article h5 a:visited, main article h6 a:hover, main article h6 a:active, main article h6 a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+main article h1 a:hover, main article h2 a:hover, main article h3 a:hover, main article h4 a:hover, main article h5 a:hover, main article h6 a:hover {
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {

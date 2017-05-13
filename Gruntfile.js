@@ -54,14 +54,14 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: ['development/js/modules/**.js'],
-        tasks: ['concat:js', 'uglify'],
+        tasks: ['concat:js', 'uglify', 'copy:dev-js'],
         options: {
           spawn: false,
         },
       },
       css: {
         files: ['development/style/scss/**.scss', 'development/style/scss/subfiles/_**.scss'],
-        tasks: ['sass'],
+        tasks: ['sass', 'copy:dev-sass'],
       },
     },
     copy: {
@@ -69,6 +69,18 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'development',
         src: ['config/**', 'dependencies/**', 'images/**', 'js/*.js', 'style/**', 'templates/**', '*'],
+        dest: 'build/bluerain/',
+      },
+      'dev-sass': {
+        expand: true,
+        cwd: 'development',
+        src: 'style/css/*',
+        dest: 'build/bluerain/',
+      },
+      'dev-js': {
+        expand: true,
+        cwd: 'development',
+        src: 'js/*.js',
         dest: 'build/bluerain/',
       },
     },
@@ -86,5 +98,5 @@ module.exports = function(grunt) {
     },
   });
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'copy', 'zip']);
+  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'copy:build', 'zip']);
 }

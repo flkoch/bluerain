@@ -1,7 +1,21 @@
 main{
-  article img { // no overflow of images, retain proportion
-    max-width: 100%;
-    height: auto;
+  article {
+    img { // no overflow of images, retain proportion
+      max-width: 100%;
+      height: auto;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      a {
+        color: inherit;
+        &:hover, &:active, &:visited {
+          color:inherit;
+          text-decoration: none;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
   div.maincontent {
     &.col-xl-8, &.col-md-6 {
