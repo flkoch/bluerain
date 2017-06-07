@@ -1,16 +1,24 @@
 {
   "name": "bluerain",
-  "version": "0.1.0",
-  "description": "A custom theme for drupal 8.x",
+  "version": "0.1.1",
+  "description": "A simple, custom build Drupal template.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "author": "Florian Koch",
+  "license": "GPL-3.0",
+  "dependencies": {},
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-concat": "^1.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "^2.3.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0",
-    "grunt-zip": "^0.17.1"
+    "gulp-batch": "^1.0.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-copy": "^1.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sequence": "^0.4.6",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-watch": "^4.3.11",
+    "gulp-zip": "^4.0.0"
   }
 }

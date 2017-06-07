@@ -23,7 +23,10 @@ footer.pagefooter {
       list-style: none;
       margin: 0px;
       padding: 0px;
-      max-width: $footer-menu-width;
+      width: 100%;
+      @media (min-width: map-get($grid-breakpoints, 'xs')) {
+        max-width: $footer-menu-width;
+      }
       li {
         padding: 10px 25px 10px 0px;
         border-top: 1px $footer-link-color solid;
