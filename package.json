@@ -1,6 +1,6 @@
 {
   "name": "bluerain",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple, custom build Drupal template.",
   "main": "gulpfile.js",
   "scripts": {
@@ -13,6 +13,7 @@
     "gulp-batch": "^1.0.5",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",
+    "gulp-header": "^1.8.8",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sequence": "^0.4.6",
