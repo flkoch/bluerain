@@ -4,6 +4,7 @@ description: A custom build theme with mobile layout support.
 core: 8.x
 libraries:
     - bluerain/global-styling
+    - bluerain/font-awesome
 libraries-override:
 
 regions:
