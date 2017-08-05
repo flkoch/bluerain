@@ -5,6 +5,6 @@
  * @license GPL-3.0
  */
 // FontAwesome
-// @import url("../../dependencies/fontawesome/css/font-awesome.min.css");
-// $fa-font-path : '../../dependencies/fontawesome/fonts';
-// @import "../../../dependencies/fontawesome/scss/font-awesome.scss";
+@import url("../../dependencies/fontawesome/css/font-awesome.min.css");
+$fa-font-path : '../../dependencies/fontawesome/fonts';
+@import "../../../dependencies/fontawesome/scss/font-awesome.scss";
