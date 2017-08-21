@@ -12,6 +12,7 @@ const header = require("gulp-header");
 
 var dirOut = "build/bluerain/";
 var dirIn = "development/";
+var localServer = "F:/server/wamp/httpdocs/tdrupal/themes/custom/bluerain/"
 const pkg = require("./package.json");
 var banner = ['/**',
   ' * @name <%= pkg.name %> - <%= pkg.description %>',
@@ -58,7 +59,7 @@ gulp.task('templates', function(){
   gulp.src(dirIn + 'templates/**/*.*')
     .pipe(gulp.dest(dirOut + 'templates'));
 });
-gulp.task('build', ['js', 'root-folder', 'dependencies', 'style', 'templates'], function(){
+gulp.task('build', ['js', 'root-folder', 'dependencies', 'sass:dev', 'sass:build', 'style', 'templates'], function(){
   gulp.src([dirOut + '**/*@(js|scss|css|min.css)', '!**/dependencies/**/*.*',])
     .pipe(header(banner, {pkg:pkg}))
     .pipe(gulp.dest(dirOut))
@@ -69,11 +70,20 @@ gulp.task('deploy:full', function(){
     .pipe(gulp.dest('build/'));
 });
 gulp.task('deploy:min', function(){
-  gulp.src([dirOut + '**/*.*', '!**/*.scss', '!**/*.css', dirOut + '**/*.min.css'], {base: 'build'})
+  gulp.src([dirOut + '*.*', dirOut + 'dependencies/**/*.*', dirOut + '!dependencies/**/*.scss', dirOut + 'js/**/*.min.js', dirOut + 'style/**/*.min.css', dirOut + 'templates/**/*.*'], {base: 'build'})
     .pipe(zip('tmpl_bluerain.min.zip'))
     .pipe(gulp.dest('build/'));
 });
+gulp.task('push:dev', function(){
+  gulp.src(dirIn + '**/*.*')
+  .pipe(gulp.dest(localServer))
+});
+gulp.task('push:min', function(){
+  gulp.src([dirOut + '*.*', dirOut + 'dependencies/**/*.*', dirOut + '!dependencies/**/*.scss', dirOut + 'js/**/*.min.js', dirOut + 'style/**/*.min.css', dirOut + 'templates/**/*.*'], {base: 'build'})
+  .pipe(gulp.dest(localServer))
+});
 gulp.task('watch', function(){
-  watch(dirIn + 'style/scss/**/*.*', batch(function(events,done){gulp.start('sass:dev', done); gulp.start('sass:build', done);}));
+  watch(dirIn + 'style/scss/**/*.*', batch(function(events,done){gulp.start('sass:dev', done);}));
   watch(dirIn + 'js/**/*.*', batch(function(events,done){gulp.start('js', done);}));
+  watch(dirIn + '**/*.*', batch(function(events,done){gulp.start('push:dev', done);}));
 });
