@@ -1,6 +1,6 @@
 /**
  * @name bluerain - A simple, custom build Drupal template.
- * @version v0.1.2
+ * @version v0.1.3
  * @author Florian Koch
  * @license GPL-3.0
  */
@@ -17,58 +17,58 @@ html {
   box-sizing: inherit; }
 
 .container, header nav ul,
-header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
   position: relative;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 396px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 576px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 768px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 992px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 1200px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       padding-right: 15px;
       padding-left: 15px; } }
   @media (min-width: 396px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       width: 378px;
       max-width: 100%; } }
   @media (min-width: 576px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       width: 544px;
       max-width: 100%; } }
   @media (min-width: 768px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       width: 720px;
       max-width: 100%; } }
   @media (min-width: 992px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       width: 940px;
       max-width: 100%; } }
   @media (min-width: 1200px) {
     .container, header nav ul,
-    header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+    header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
       width: 1140px;
       max-width: 100%; } }
 
@@ -3264,7 +3264,7 @@ body {
     color: #0275d8;
     text-decoration: none; }
     body a:hover {
-      text-decoration: underline;
+      text-decoration: none;
       color: #0275d8; }
   body p {
     text-align: justify;
@@ -3312,9 +3312,12 @@ body {
 
 @media screen and (max-width: 396px) {
   .container, header nav ul,
-  header nav ol, header div.language-switcher-language-url, header .logo-search, .highlight > *, #block-bluerain-breadcrumbs nav {
+  header nav ol, header div.language-switcher-language-url, header .logo-search, .maintenance-page header .site-branding, .highlight > *, .maintenance-page main, #block-bluerain-breadcrumbs nav {
     padding-left: 10px;
     padding-right: 10px; } }
+
+body.maintenance-page {
+  background-color: #fff; }
 
 input {
   line-height: 1.3;
@@ -3473,19 +3476,14 @@ header {
     header .logo-search .search {
       flex-basis: 30%; } }
 
-.logo-search .logo > div {
+.logo {
   max-height: 300px;
   padding: 0px 10px 0px 0px; }
-  .logo-search .logo > div a {
-    color: #fff; }
-    .logo-search .logo > div a img {
-      max-height: 285px;
-      min-height: 35px; }
-    .logo-search .logo > div a:hover {
-      color: #fff;
-      text-decoration: none; }
-    .logo-search .logo > div a ~ a {
-      display: none; }
+  .logo a img, .logo img {
+    max-height: 285px;
+    min-height: 35px;
+    max-width: 100%;
+    width: auto; }
 
 .logo-search .search > div {
   padding: 5px 10px 10px; }
@@ -3513,6 +3511,11 @@ header {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px #0232cc; }
       .logo-search .search > div form div input[type=submit] {
         display: none; }
+
+.maintenance-page header {
+  border-bottom: 45px #0232cc solid; }
+  .maintenance-page header a:hover {
+    text-decoration: none; }
 
 div#main-navbar {
   background: #0033cc;

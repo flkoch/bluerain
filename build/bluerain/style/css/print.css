@@ -1,6 +1,6 @@
 /**
  * @name bluerain - A simple, custom build Drupal template.
- * @version v0.1.2
+ * @version v0.1.3
  * @author Florian Koch
  * @license GPL-3.0
  */
