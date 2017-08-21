@@ -152,3 +152,12 @@ header {
     }
   }
 }
+.maintenance-page header {
+  .site-branding{
+    @extend .container;
+  }
+  border-bottom: 45px $brand-primary solid;
+  a:hover {
+    text-decoration: none;
+  }
+}

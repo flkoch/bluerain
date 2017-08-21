@@ -1,7 +1,7 @@
 body {
   margin: 0px; // make the body extend right to the edge of the window
   width: 100%;
-  background-color: $footer-bg;
+  background-color: $footer-bg; // important to have the rest page the same color as the footer
   // General Link layout
   a {
     color: $link-color;
@@ -43,4 +43,7 @@ body {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+body.maintenance-page { // Styling specific to the maintenance page
+  background-color: $body-bg;
 }

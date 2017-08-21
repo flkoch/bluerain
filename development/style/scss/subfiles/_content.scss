@@ -56,3 +56,6 @@ ul.links.inline{
     }
   }
 }
+.maintenance-page main{
+  @extend .container;
+}

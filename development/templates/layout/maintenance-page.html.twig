@@ -10,22 +10,26 @@
  */
 #}
 <header role="banner">
-  {% if logo %}
-    <div class="logo">
-      <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+  {% if logo or site_name or site_slogan %}
+    <div class="site-branding">
+    {% if logo %}
+      <div class="logo">
+        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+      </div>
+    {% endif %}
+
+    {% if site_name or site_slogan %}
+      {% if site_name %}
+        <h1 class="site_name">
+          <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+        </h1>
+      {% endif %}
+
+      {% if site_slogan %}
+        <div class="site_slogan">{{ site_slogan }}</div>
+      {% endif %}
+    {% endif %}
     </div>
-  {% endif %}
-
-  {% if site_name or site_slogan %}
-    {% if site_name %}
-      <h1 class="site_name">
-        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
-      </h1>
-    {% endif %}
-
-    {% if site_slogan %}
-      <div class="site_slogan">{{ site_slogan }}</div>
-    {% endif %}
   {% endif %}
 </header>
 
@@ -38,18 +42,6 @@
 
   {{ page.content }}
 </main>
-
-{% if page.sidebar_first %}
-  <aside role="complementary">
-    {{ page.sidebar_first }}
-  </aside>
-{% endif %}
-
-{% if page.sidebar_second %}
-  <aside role="complementary">
-    {{ page.sidebar_second }}
-  </aside>
-{% endif %}
 
 {% if page.footer %}
   <footer role="contentinfo">
