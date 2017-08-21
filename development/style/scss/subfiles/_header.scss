@@ -106,22 +106,14 @@ header {
   }
 }
 
-.logo-search .logo>div {
+.logo {
   max-height: 300px;
   padding: 0px 10px 0px 0px;
-  a {
-    img {
-      max-height: 285px;
-      min-height: 35px;
-    }
-    color: $header-bg;
-    &:hover {
-      color: $header-bg;
-      text-decoration: none;
-    }
-    &~a {
-      display: none;
-    }
+  a img, img {
+    max-height: 285px;
+    min-height: 35px;
+    max-width: 100%;
+    width: auto;
   }
 }
 
