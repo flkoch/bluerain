@@ -1,3 +1,4 @@
+@import url("../../dependencies/fontawesome/css/font-awesome.min.css");
 @-ms-viewport {
   width: device-width; }
 
@@ -929,8 +930,8 @@ header nav ol, header div.language-switcher-language-url, header .logo-search, .
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("https://www.fkoch.ch/themes/custom/bluerain/dependencies/fontawesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
