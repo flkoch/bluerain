@@ -11,7 +11,7 @@ const header = require("gulp-header");
 // const seq = require("gulp-sequence");
 
 var dirOut = "build/bluerain/";
-var dirIn = "development/";
+var dirIn = "src/";
 var localServer = "F:/server/wamp/httpdocs/tdrupal/themes/custom/bluerain/"
 const pkg = require("./package.json");
 var banner = ['/**',
