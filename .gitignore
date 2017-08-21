@@ -42,3 +42,4 @@ Thumbs.db
 *.js.map
 /node_modules*
 *version.txt
+.dev.*
