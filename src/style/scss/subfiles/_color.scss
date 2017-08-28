@@ -1,8 +1,10 @@
 // General Colors
 
+$blue: #0232cc;
+
 // Themed Colors
 
-$brand-primary: #0232cc;
+$brand-primary: $blue;
 $brand-secondary: #0033cc;
 
 // General Colors
@@ -10,35 +12,35 @@ $link-hover-color: $link-color;
 
 // Header Colors
 $header-bg: $body-bg;
-$header-menu-bg: $gray-dark;
-$header-menu-color: $gray-lighter;
+$header-menu-bg: $gray-800;
+$header-menu-color: $gray-200;
 
 // Main Menu Colors
 $main-menu-bg: $brand-secondary;
-$main-menu-color: $gray-lightest;
+$main-menu-color: $gray-100;
 $main-menu-hover-color: #fff;
 $main-menu-active-color: $main-menu-color;
-$main-menu-dropdown-bg: $gray-dark;
-$main-menu-dropdown-color: $gray-lighter;
-$main-menu-dropdown-hover-color: $gray-lightest;
-$main-menu-dropdown-hover-bg: $gray;
-$main-menu-dropdown-active-color: $gray-lightest;
-$main-menu-dropdown-active-bg: $gray-dark;
-$main-menu-dropdown-devider: $gray-light;
+$main-menu-dropdown-bg: $gray-800;
+$main-menu-dropdown-color: $gray-200;
+$main-menu-dropdown-hover-color: $gray-100;
+$main-menu-dropdown-hover-bg: $gray-600;
+$main-menu-dropdown-active-color: $gray-100;
+$main-menu-dropdown-active-bg: $gray-800;
+$main-menu-dropdown-devider: $gray-400;
 
 // Highlight
-$highlight-bg: $gray-lightest !default;
-$highlight-border: 1px $gray-lighter solid !default;
+$highlight-bg: $gray-100 !default;
+$highlight-border: 1px $gray-200 solid !default;
 
 
 // Breadcrumb Color overrides
-$breadcrumb-color: $gray-light;
-$breadcrumb-hover-color: $gray-dark;
+$breadcrumb-color: $gray-400;
+$breadcrumb-hover-color: $gray-800;
 
 
 // Footer colors
-$footer-bg: $gray-dark;
-$footer-color: $gray;
+$footer-bg: $gray-800;
+$footer-color: $gray-700;
 $footer-link-color: $footer-color !default;
 $footer-link-hover-color: $footer-link-color !default;
-$footer-link-hover-color: $gray-light;
+$footer-link-hover-color: $gray-600;

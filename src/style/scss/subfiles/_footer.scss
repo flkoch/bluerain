@@ -15,8 +15,20 @@ footer.pagefooter {
       text-decoration: $footer-link-hover-decoration;
     }
   }
-  section {
-    padding: 25px 0px;
+   section {
+     padding: 25px 0px;
+   }
+  .footer {
+    @extend .col-sm;
+    @extend .col-md-6;
+    order: 1;
+  }
+  .footer-menu {
+    @extend .col-sm-auto;
+  }
+  .credits {
+    @extend .col-sm;
+    order: 3;
   }
   nav {
     ul {

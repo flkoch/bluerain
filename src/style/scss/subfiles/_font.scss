@@ -4,6 +4,6 @@
 @function unicode($str) {
   @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
 }
-
-@import url("../../dependencies/fontawesome/css/font-awesome.min.css");
+$fa-font-path: "../../dependencies/fontawesome/fonts";
+// @import url("../../dependencies/fontawesome/css/font-awesome.min.css");
 @import "../../../dependencies/fontawesome/scss/font-awesome.scss";

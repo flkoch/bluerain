@@ -54,18 +54,18 @@ div#block-bluerain-local-tasks {
     padding: 0px;
     clear: both;
     width: 100%;
-    border-bottom: 1px $gray-dark solid;
+    border-bottom: 1px $gray-800 solid;
     li {
       padding: 5px 10px 0px 10px;
       display: inline-block;
       border-top-left-radius: 10px;
       border-top-right-radius: 10px;
-      border-top: 1px $gray-dark solid;
-      border-right: 1px $gray-dark solid;
-      border-left: 1px $gray-dark solid;
+      border-top: 1px $gray-800 solid;
+      border-right: 1px $gray-800 solid;
+      border-left: 1px $gray-800 solid;
       margin-right: 10px;
       a.is-active {
-        color: $gray;
+        color: \$gray-600;
         // pointer-events: none; // to disable view action
         // cursor: default;
       }

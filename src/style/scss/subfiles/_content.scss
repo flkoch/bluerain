@@ -1,4 +1,5 @@
 main{
+  @extend .container;
   article {
     img { // no overflow of images, retain proportion
       max-width: 100%;
@@ -17,30 +18,44 @@ main{
       }
     }
   }
+  .main-cols {
+    @include make-row();
+  }
+  div.maincontent, aside.sidebar-left, aside.sidebar-right {
+    @include make-col-ready();
+  }
+  aside.sidebar-left, aside.sidebar-right {
+    @extend .col;
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
   div.maincontent {
-    &.col-xl-8, &.col-md-6 {
-      >div {
-        @media (min-width: map-get($grid-breakpoints,"md")) {
-          margin-left: $grid-width;
-          margin-right: $grid-width;
-        }
+    @include make-col(12);
+    &.one-sidebar {
+      @include media-breakpoint-up(sm) {
+        order: 2;
+        @include make-col(8);
+      }
+      @include media-breakpoint-up(lg) {
+        @include make-col(9);
       }
     }
-    &.col-lg-9.push-lg-3, &.col-sm-8.push-sm-4 {
-      >div {
-        @media (min-width: map-get($grid-breakpoints, "sm")) {
-          margin-left: $grid-width;
-          margin-right: 0rem;
-        }
+    &.two-sidebars {
+      @include media-breakpoint-up(md) {
+        order: 2;
+        @include make-col(6);
+      }
+      @include media-breakpoint-up(xl) {
+        @include make-col(8);
       }
     }
-    &.col-lg-9, &.col-sm-8 {
-      >div {
-        @media (min-width: map-get($grid-breakpoints, "sm")) {
-          margin-right: $grid-width;
-        }
-      }
-    }
+  }
+  aside.sidebar-left {
+    order: 1;
+  }
+  aside.sidebar-right {
+    order: 3;
   }
 }
 ul.links.inline{

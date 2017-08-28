@@ -3,6 +3,7 @@ header {
   position: static;
   #header-menu{
     width: 100%;
+    @include make-container;
     background-color: $header-menu-bg;
     color: $header-menu-color;
   }
@@ -22,7 +23,7 @@ header {
         display: inline-block;
         margin-right: 10px;
         padding-right: 10px;
-        border-right: 1px solid $gray-light;
+        border-right: 1px solid \$gray-300;
         &:last-child {
           margin: 0px;
           padding: 0px;
@@ -125,7 +126,6 @@ header {
   form {
     text-align: right;
     div {
-      display: inline;
       input {
         text-align: left;
       }
@@ -149,6 +149,9 @@ header {
       input[type=submit] {
         display: none;
       }
+    }
+    .input-group {
+      align-items: center;
     }
   }
 }
