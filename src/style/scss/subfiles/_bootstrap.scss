@@ -42,4 +42,5 @@ $container-max-widths: (
 $enable-flex: true;
 
 
-@import "../../../dependencies/bootstrap/scss/bootstrap";
+@import "../../../dependencies/bootstrap/scss/bootstrap-reboot";
+@import "../../../dependencies/bootstrap/scss/bootstrap-grid";
