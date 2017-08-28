@@ -6,39 +6,39 @@ div#main-navbar {
 
   nav { // Menu part
 
-    >ul, >ol {
+    >ul, >ol { // top menu level
       list-style: none;
       padding-right: -30px;
       padding-left: 0px;
       margin: 0px auto;
-      >li, >li.active {
+      >li, >li.active { // top menu level items
         display: inline-block;
         position: relative;
-        padding: 15px 0px;
         margin-right: 30px;
         &:hover {
-          > a {
+          > a { // top menu links hover
             color: $main-menu-hover-color;
             text-decoration: inherit;
             @include box-shadows(0px -2px 0px $main-menu-hover-color inset);
           }
         }
-        a {
+        > a { //top menu links
           padding: 13px 0px 15px;
           color: $main-menu-color;
           text-decoration: none;
+          display: inline-block;
         }
-        &.dropdown {
+        &.dropdown { // top menu level items with dropdown submenu
           > a:after {
             font-family: "FontAwesome";
             content: "\f0d7";
             color: $main-menu-color;
           }
-          >ul.dropdown-menu {
+          >ul.dropdown-menu { // first level submenu
             top: 50px;
             left: 0px;
-            z-index: 500;
-            >li, >li.active {
+            z-index: 1000;
+            >li, >li.active { // first level submenu items
               &.dropdown {
                 > a:after {
                   font-family: "FontAwesome";
@@ -55,7 +55,7 @@ div#main-navbar {
               }
             }
           }
-          ul.dropdown-menu {
+          ul.dropdown-menu { // submenus in feneral
             display: none;
             list-style: none;
             position: absolute;
@@ -65,8 +65,7 @@ div#main-navbar {
             color: $main-menu-dropdown-color;
             li, li.active {
               border-top: $dropdown-menu-border-top-width $main-menu-dropdown-devider solid;
-              padding: $dropdown-menu-item-padding-top $dropdown-menu-item-padding-right $dropdown-menu-item-padding-bottom $dropdown-menu-item-padding-left;
-              width: $dropdown-menu-width - ($dropdown-menu-item-padding-left + $dropdown-menu-item-padding-right);
+              padding: 0px;
               position: relative;
               &:last-child {
                 border-bottom: 1px $main-menu-dropdown-devider solid;
@@ -82,11 +81,13 @@ div#main-navbar {
                   color: $main-menu-dropdown-color;
                 }
                 ul.dropdown-menu {
-                  border-left: 5px $main-menu-dropdown-devider solid;
+                  border-left: $dropdown-menu-seperator-width $main-menu-dropdown-devider solid;
                 }
                 &:hover > ul.dropdown-menu {
                   display: block;
-                  left: $dropdown-menu-width;
+                }
+                > ul.dropdown-menu {
+                  left: $dropdown-menu-width - $dropdown-menu-seperator-width - $dropdown-menu-padding-horizontal;
                   top: -$dropdown-menu-border-top-width;
                 }
               }
@@ -96,6 +97,12 @@ div#main-navbar {
                   box-shadow: none;
                   color: $main-menu-dropdown-hover-color;
                 }
+              }
+              a {
+                padding: $dropdown-menu-item-padding-top $dropdown-menu-item-padding-right $dropdown-menu-item-padding-bottom $dropdown-menu-item-padding-left;
+                display: inline-block;
+                width: 100%;
+                min-height: 45px;
               }
             }
           }
@@ -128,22 +135,22 @@ div#main-navbar {
       @extend %language-switcher-links-class;
     }
   }
-}
-ul%language-switcher-links-class {
-  text-align: right;
-  padding-left: 30px;
-  >li {
-    border-right: 1px darken($main-menu-color,20%) solid;
-    &:last-child {
-      border: none;
-    }
-    a.language-link {
-      color: darken($main-menu-color,10%);
-      &:hover {
-        color: $main-menu-hover-color;
+  ul%language-switcher-links-class {
+    text-align: right;
+    padding-left: 30px;
+    >li {
+      border-right: 1px darken($main-menu-color,20%) solid;
+      &:last-child {
+        border: none;
       }
-      &.is-active:hover {
+      a.language-link {
         color: darken($main-menu-color,10%);
+        &:hover {
+          color: $main-menu-hover-color;
+        }
+        &.is-active:hover {
+          color: darken($main-menu-color,10%);
+        }
       }
     }
   }

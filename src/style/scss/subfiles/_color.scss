@@ -21,12 +21,12 @@ $main-menu-color: $gray-100;
 $main-menu-hover-color: #fff;
 $main-menu-active-color: $main-menu-color;
 $main-menu-dropdown-bg: $gray-800;
-$main-menu-dropdown-color: $gray-200;
+$main-menu-dropdown-color: $gray-300;
 $main-menu-dropdown-hover-color: $gray-100;
-$main-menu-dropdown-hover-bg: $gray-600;
+$main-menu-dropdown-hover-bg: $gray-700;
 $main-menu-dropdown-active-color: $gray-100;
 $main-menu-dropdown-active-bg: $gray-800;
-$main-menu-dropdown-devider: $gray-400;
+$main-menu-dropdown-devider: $gray-500;
 
 // Highlight
 $highlight-bg: $gray-100 !default;
@@ -34,13 +34,12 @@ $highlight-border: 1px $gray-200 solid !default;
 
 
 // Breadcrumb Color overrides
-$breadcrumb-color: $gray-400;
+$breadcrumb-color: $gray-600;
 $breadcrumb-hover-color: $gray-800;
 
 
 // Footer colors
 $footer-bg: $gray-800;
-$footer-color: $gray-700;
+$footer-color: $gray-600;
 $footer-link-color: $footer-color !default;
-$footer-link-hover-color: $footer-link-color !default;
-$footer-link-hover-color: $gray-600;
+$footer-link-hover-color: $gray-500;
