@@ -3,16 +3,24 @@ div#main-navbar {
   border-bottom: 1px darken($main-menu-bg,10%) solid;
   display: inline-block;
   width: 100%;
-
+  >div {
+    @extend .d-flex;
+    justify-content: space-between;
+    >div {
+      display: inline-block;
+    }
+  }
   nav { // Menu part
-
+    flex: 0 1 auto;
     >ul, >ol { // top menu level
       list-style: none;
       padding-right: -30px;
       padding-left: 0px;
       margin: 0px auto;
+      display: inline-flex;
       >li, >li.active { // top menu level items
         display: inline-block;
+        flex: 0 1 auto;
         position: relative;
         margin-right: 30px;
         &:hover {
@@ -55,7 +63,7 @@ div#main-navbar {
               }
             }
           }
-          ul.dropdown-menu { // submenus in feneral
+          ul.dropdown-menu { // submenus in general
             display: none;
             list-style: none;
             position: absolute;
@@ -130,50 +138,52 @@ div#main-navbar {
     }
   }
   div.language-switcher-language-url {
-    float: right;
+    flex: 0 0 auto;
     ul.language-switcher-links{
-      @extend %language-switcher-links-class;
-    }
-  }
-  ul%language-switcher-links-class {
-    text-align: right;
-    padding-left: 30px;
-    >li {
-      border-right: 1px darken($main-menu-color,20%) solid;
-      &:last-child {
-        border: none;
-      }
-      a.language-link {
-        color: darken($main-menu-color,10%);
-        &:hover {
-          color: $main-menu-hover-color;
+      padding: 13px 0px 15px 30px;
+      display: inline-block;
+      >li {
+        border-right-color: darken($main-menu-color,20%);
+        &:last-child {
+          border: none;
         }
-        &.is-active:hover {
+        a.language-link {
           color: darken($main-menu-color,10%);
+          &:hover {
+            color: $main-menu-hover-color;
+          }
+          &.is-active:hover {
+            color: darken($main-menu-color,10%);
+          }
         }
       }
     }
   }
 }
 
+// * Language Switcher general Style
+
 div.language-switcher-language-url {
   ul.language-switcher-links {
     margin: auto 0px;
     padding-left: 0px;
+    display: inline-flex;
+    justify-content: flex-end;
+    list-style: none;
     >li {
-      list-style: none;
+      flex: 0 0 auto;
       display: inline-block;
-      padding: 0px 5px;
-      margin: 10px 0px;
-      border-right: 1px darken($body-color,20%) solid;
+      padding-right: 10px;
+      margin-right: 10px;
+      border-right-width: 1px;
+      border-right-style: solid;
       &:last-child {
-        border: none;
+        border-right: none;
+        margin-right: 0px;
+        padding-right: 0px;
       }
-      a.language-link {
-        color: $body-color;
-        &:hover {
-          text-decoration: none;
-        }
+      a.language-link:hover {
+        text-decoration: none;
       }
     }
   }

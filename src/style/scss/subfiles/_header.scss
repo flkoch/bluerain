@@ -3,11 +3,16 @@ header {
   position: static;
   #header-menu{
     width: 100%;
-    @include make-container;
     background-color: $header-menu-bg;
     color: $header-menu-color;
   }
   nav, div[role~=navigation] {
+    flex: 0 0 auto;
+    display: inline-block;
+    margin-left: 40px;
+    &:first-child{
+      margin-left: inherit;
+    }
     >h2 {
       display: none;
     }
@@ -16,19 +21,19 @@ header {
       list-style: none;
       padding: 5px 0px;
       margin: 0px auto 0px;
-      @extend .container;
-      text-align: right;
       li {
-        // float: right;
-        display: inline-block;
-        margin-right: 10px;
-        padding-right: 10px;
-        border-right: 1px solid \$gray-300;
-        &:last-child {
-          margin: 0px;
-          padding: 0px;
-          border: none;
-        }
+        // display: inline-block;
+        // margin-right: 10px;
+        // padding-right: 10px;
+        // border-right: 1px solid $gray-300;
+        // flex: 0 0 auto;
+        // justify-content: flex-end;
+        // &:last-child {
+        //   margin-right: 0px;
+        //   padding-right: 0px;
+        //   border-right: none;
+        // }
+        border-right-color: darken($header-menu-color,15%);
         a {
           color: inherit;
           text-decoration: none;
@@ -40,15 +45,6 @@ header {
           }
         }
       }
-    }
-  }
-  div.language-switcher-language-url {
-    @extend.container;
-    ul.language-switcher-links {
-      > li {
-        margin: 5px 0px;
-      }
-      @extend %language-switcher-links-class;
     }
   }
   .logo-search {
