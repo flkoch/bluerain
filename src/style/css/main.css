@@ -6263,6 +6263,9 @@ main article img {
   max-width: 100%;
   height: auto; }
 
+main article picture > img {
+  width: 100%; }
+
 main article h1 a, main article h2 a, main article h3 a, main article h4 a, main article h5 a, main article h6 a {
   color: inherit; }
   main article h1 a:hover, main article h1 a:active, main article h1 a:visited, main article h2 a:hover, main article h2 a:active, main article h2 a:visited, main article h3 a:hover, main article h3 a:active, main article h3 a:visited, main article h4 a:hover, main article h4 a:active, main article h4 a:visited, main article h5 a:hover, main article h5 a:active, main article h5 a:visited, main article h6 a:hover, main article h6 a:active, main article h6 a:visited {
