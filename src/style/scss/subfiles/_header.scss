@@ -7,7 +7,7 @@ header {
     background-color: $header-menu-bg;
     color: $header-menu-color;
   }
-  nav {
+  nav, div[role~=navigation] {
     >h2 {
       display: none;
     }
