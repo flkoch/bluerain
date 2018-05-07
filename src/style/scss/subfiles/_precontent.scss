@@ -5,9 +5,6 @@
   padding-bottom: 25px;
   margin-bottom: 15px;
   border-bottom: $highlight-border;
-  >* {
-    @extend .container;
-  }
 }
 .messages {
   background: #f2dede;

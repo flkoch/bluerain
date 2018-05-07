@@ -20,30 +20,6 @@ body {
   background-color: $body-bg; // background for normal blocks
   color: $body-color; // color for regular text
 }
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint){
-    .margin-#{$breakpoint}-left {
-      >*:first-child {
-        margin-left: $grid-width;
-      }
-    }
-    .margin-#{$breakpoint}-right {
-      >*:last-child {
-        margin-right: $grid-width;
-      }
-    }
-    .margin-#{$breakpoint} {
-      @extend .margin-#{$breakpoint}-left;
-      @extend .margin-#{$breakpoint}-right;
-    }
-  }
-}
-@media screen and (max-width: 396px) {
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
 body.maintenance-page { // Styling specific to the maintenance page
   background-color: $body-bg;
 }

@@ -17,7 +17,14 @@ $dropdown-menu-seperator-width: 5px;
 $dropdown-menu-border-top-width: 1px;
 
 // Breadcrumb
-$breadcrumb-padding-x: 0px;
+$breadcrumb-padding-x: 0px !default;
+$breadcrumb-padding-y: $breadcrumb-padding-x !default;
+
+// Pagination
+$pagination-padding-x: 0px !default;
+$pagination-padding-y: $pagination-padding-x !default;
+$pagination-line-height: 3;
+$pagination-border-width: 2px !default;
 
 // Footer Menu
 $footer-menu-width: 200px;

@@ -4,7 +4,6 @@ div#main-navbar {
   display: inline-block;
   width: 100%;
   >div {
-    @extend .d-flex;
     justify-content: space-between;
     >div {
       display: inline-block;

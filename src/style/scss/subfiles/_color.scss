@@ -1,15 +1,29 @@
 // General Colors
 
 $blue: #0232cc;
+$red: #9c1200;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 
 // Themed Colors
 
 $brand-primary: $blue;
-$brand-secondary: #0033cc;
+$brand-secondary: #0035ce;
 
 // General Colors
+$link-color: $brand-primary;
 $link-hover-color: $link-color;
 
+// Body Colors
+$body-bg: $gray-200 !default;
+$body-color: $gray-900 !default;
 // Header Colors
 $header-bg: $body-bg;
 $header-menu-bg: $gray-800;
@@ -28,14 +42,33 @@ $main-menu-dropdown-active-color: $gray-100;
 $main-menu-dropdown-active-bg: $gray-800;
 $main-menu-dropdown-devider: $gray-500;
 
-// Highlight
+// Highlight Colors
 $highlight-bg: $gray-100 !default;
 $highlight-border: 1px $gray-200 solid !default;
 
 
-// Breadcrumb Color overrides
-$breadcrumb-color: $gray-600;
-$breadcrumb-hover-color: $gray-800;
+// Breadcrumb Colors
+$breadcrumb-color: $gray-600 !default;
+$breadcrumb-bg: $gray-900 !default;
+$breadcrumb-divider-color: $gray-700 !default;
+$breadcrumb-hover-color: $gray-800 !default;
+$breadcrumb-hover-bg: $gray-500 !default;
+$breadcrumb-active-color: $gray-500 !default;
+$breadcrumb-active-bg: $breadcrumb-bg !default;
+
+// Pagination Colors
+$pagination-color: $gray-200 !default;
+$pagination-bg: $gray-800 !default;
+$pagination-border-color: $gray-900 !default;
+$pagination-active-color: $gray-400 !default;
+$pagination-active-bg: $pagination-bg !default;
+$pagination-active-border-color: $pagination-border-color !default;
+$pagination-disabled-color: $pagination-active-color !default;
+$pagination-disabled-bg: $pagination-bg !default;
+$pagination-disabled-border-color: $pagination-border-color !default;
+$pagination-hover-color: $pagination-bg !default;
+$pagination-hover-bg: $pagination-color !default;
+$pagination-hover-border-color: $pagination-border-color !default;
 
 
 // Footer colors

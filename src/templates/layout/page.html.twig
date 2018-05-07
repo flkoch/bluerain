@@ -55,24 +55,17 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
-  {% if page.header_menu or page.logo or page.searchbar %}
-  <header role="banner">
-    {{ page.header_menu }}
-    {% if page.logo or page.searchbar %}
-      <div class="logo-search">
-        {{ page.logo }}
-        {{ page.searchbar }}
-      </div>
-    {% endif %}
-  </header>
-  {% endif %}
+{% if page.header_menu or page.logo or page.searchbar %}
+<header role="banner">
+  {{ page.header_menu }}
+  {{ page.logo }}
+  {{ page.searchbar }}
+</header>
+{% endif %}
 {% if page.primary_menu or page.language_switcher %}
   <div id="main-navbar">
-    <div class="container">
-        {{ page.primary_menu }}
-        {{ page.language_switcher }}
-    </div>
+    {{ page.primary_menu }}
+    {{ page.language_switcher }}
   </div>
 {% endif %}
 
@@ -81,94 +74,35 @@
   {{ page.messages }}
 
   <main role="main">
-    <div class="row">
-      {% set cols = [page.col_1, page.col_2, page.col_3, page.col_4, page.col_5, page.col_6] %}
-      {% set active = 0 %}
+    {% set cols = [page.col_1, page.col_2, page.col_3, page.col_4, page.col_5, page.col_6] %}
+    <div class="maincontent">
+      {{ page.content }}
+    </div>
+    <aside class="sidebar-left">
+      {{ page.sidebar_first }}
+    </aside>
+    <aside class="sidebar-right">
+      {{ page.sidebar_second }}
+    </aside>
+    <div class="main-cols">
       {% for col in cols if col is not empty %}
-        {% set active = active + 1 %}
+        <section class="col">
+          {{ col }}
+        </section>
       {% endfor %}
-
-      {# Different layout according to number of columns #}
-      {% if active == 0 %} {# no column #}
-        {% set cont= page.content %}
-      {% elseif active >= 1 and active <= 3 %} {# one row of columns (1-3) #}
-        {% set cont %}
-          {{ page.content }}
-          <div class="main-cols">
-            {% for col in cols if col is not empty %}
-              <section class="col-sm">
-                {{ col }}
-              </section>
-            {% endfor %}
-          </div>
-        {% endset %}
-      {% elseif active >= 4 %} {# two rows of columns (4-6) #}
-        {% set cont %}
-          {{ page.content }}
-          <div class="main-cols">
-            {% for col in cols if col is not empty %}
-              {% if loop.index > (active / 2) and loop.index <= ((active / 2) + 1) %} {# break the columns in two rows #}
-                <div class="w-100 d-none d-lg-block"></div>
-              {% endif %}
-              <section class="col-sm">
-                {{ col }}
-              </section>
-            {% endfor %}
-          </div>
-        {% endset %}
-      {% endif %}
-
-      {% if page.sidebar_first %}
-        {% if page.sidebar_second %} {# both sidebars #}
-          <div class="maincontent two-sidebars">
-            {{ cont }}
-          </div>
-          <aside class="sidebar-left">
-            {{ page.sidebar_first }}
-          </aside>
-          <aside class="sidebar-right">
-            {{ page.sidebar_second }}
-          </aside>
-        {% else %} {# only first sidebar #}
-          <div class="maincontent one-sidebar">
-            {{ cont }}
-          </div>
-          <aside class="sidebar-left">
-            {{ page.sidebar_first }}
-          </aside>
-        {% endif %}
-      {% elseif page.sidebar_second %} {# only second sidebar #}
-        <div class="maincontent one-sidebar">
-          {{ cont }}
-        </div>
-        <aside class="sidebar-right">
-          {{ page.sidebar_second }}
-        </aside>
-      {% else %} {# no sidebar #}
-        <div class="maincontent">
-          {{ cont }}
-        </div>
-      {% endif %}
-
     </div>
   </main>
   {{ page.breadcrumb }}
   {% if page.footer or page.footer_menu or page.credits %}
     <footer role="contentinfo" class="pagefooter">
-      <div class="container">
-        <div class="row">
-          {% if page.footer %}
-            <section class="footer"> {{ page.footer }} </section>
-          {% endif %}
-          {% if page.footer_menu %}
-            <section class="footer-menu"> {{ page.footer_menu }} </section>
-          {% endif %}
-          {% if page.credits %}
-            <section class="credits"> {{ page.credits }} </section>
-          {% endif %}
-        </div>
-      </div>
+      {% if page.footer %}
+        <section class="footer"> {{ page.footer }} </section>
+      {% endif %}
+      {% if page.footer_menu %}
+        <section class="footer-menu"> {{ page.footer_menu }} </section>
+      {% endif %}
+      {% if page.credits %}
+        <section class="credits"> {{ page.credits }} </section>
+      {% endif %}
     </footer>
   {% endif %}
-
-</div>{# /.layout-container #}

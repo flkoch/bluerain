@@ -1,5 +1,4 @@
 main{
-  @extend .container;
   article {
     img { // no overflow of images, retain proportion
       max-width: 100%;
@@ -21,45 +20,6 @@ main{
       }
     }
   }
-  .main-cols {
-    @include make-row();
-  }
-  div.maincontent, aside.sidebar-left, aside.sidebar-right {
-    @include make-col-ready();
-  }
-  aside.sidebar-left, aside.sidebar-right {
-    @extend .col;
-    @include media-breakpoint-down(sm) {
-      display: none;
-    }
-  }
-  div.maincontent {
-    @include make-col(12);
-    &.one-sidebar {
-      @include media-breakpoint-up(sm) {
-        order: 2;
-        @include make-col(8);
-      }
-      @include media-breakpoint-up(lg) {
-        @include make-col(9);
-      }
-    }
-    &.two-sidebars {
-      @include media-breakpoint-up(md) {
-        order: 2;
-        @include make-col(6);
-      }
-      @include media-breakpoint-up(xl) {
-        @include make-col(8);
-      }
-    }
-  }
-  aside.sidebar-left {
-    order: 1;
-  }
-  aside.sidebar-right {
-    order: 3;
-  }
 }
 ul.links.inline{
   margin: 5px 0px;
@@ -73,7 +33,4 @@ ul.links.inline{
       margin-right: 0px;
     }
   }
-}
-.maintenance-page main{
-  @extend .container;
 }

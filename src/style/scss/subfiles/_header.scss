@@ -47,60 +47,6 @@ header {
       }
     }
   }
-  .logo-search {
-    @extend .container;
-    @media (max-width: map-get($grid-breakpoints, 'sm') - 1px){
-      .search {
-        .search-block-form form .input-group {
-          display: flex;
-          input {
-            flex: 1 1 150px;
-          }
-          span {
-            flex: 0 0 15px;
-            margin-top: auto;
-            margin-bottom: auto;
-          }
-        }
-      }
-    }
-    @media (min-width: map-get($grid-breakpoints, 'sm')){
-      display: flex;
-      >.logo, >.search {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-flow: row wrap;
-      }
-      .logo:last-child{
-        flex-basis: 100%;
-      }
-      .search:first-child{
-        flex-basis: 100%;
-      }
-      .logo {
-        flex-basis: 100%;
-      }
-      .search {
-        flex-basis: 100%;
-      }
-    }
-    @media (min-width: map-get($grid-breakpoints, 'lg')){
-      .logo {
-        flex-basis: 65%;
-      }
-      .search {
-        flex-basis: 35%;
-      }
-    }
-    @media (min-width: map-get($grid-breakpoints, 'xl')){
-      .logo {
-        flex-basis: 70%;
-      }
-      .search {
-        flex-basis: 30%;
-      }
-    }
-  }
 }
 
 .logo {
@@ -126,18 +72,6 @@ header {
         text-align: left;
       }
       input[type=search] {
-        @media (min-width: map-get($grid-breakpoints, 'sm')){
-          width: 150px;
-          &:focus {
-            width: 215px;
-          }
-        }
-        @media (min-width: map-get($grid-breakpoints, 'md')){
-          width: 150px;
-          &:focus {
-            width: 250px;
-          }
-        }
         &:focus {
           @include box-shadows(0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px $brand-primary);
         }
@@ -152,9 +86,6 @@ header {
   }
 }
 .maintenance-page header {
-  .site-branding{
-    @extend .container;
-  }
   border-bottom: 45px $brand-primary solid;
   a:hover {
     text-decoration: none;

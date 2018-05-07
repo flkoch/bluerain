@@ -2,20 +2,10 @@ global-styling:
   version: 1.x
   css:
     theme:
-      style/css/main.min.css: { media: screen, minified: true }
-      style/css/print.min.css: { media: print, minified: true }
+      style/css/main.css: { media: screen, minified: false }
+      style/css/print.css: { media: print, minified: false }
   js:
     theme:
-      js/main.min.js: {}
+      js/main.js: {}
   dependencies:
     - core/jquery
-#font-awesome:
-#  remote: https://fortawesome.github.io/Font-Awesome/
-#  version: 4.7.0
-#  license:
-#    name: MIT
-#    url: https://fortawesome.github.io/Font-Awesome/license/
-#    gpl-compatible: true
-#  css:
-#    theme:
-#      https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }

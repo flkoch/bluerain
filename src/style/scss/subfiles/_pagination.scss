@@ -3,7 +3,6 @@
   // 1-2: Disable browser default list styles
   padding-left: 0; // 1
   list-style: none; // 2
-  @include border-radius();
 }
 
 .page-item {
@@ -11,13 +10,9 @@
   &:first-child {
     .page-link {
       margin-left: 0;
-      @include border-left-radius($border-radius);
     }
   }
   &:last-child {
-    .page-link {
-      @include border-right-radius($border-radius);
-    }
   }
 
   &.active .page-link {
@@ -45,7 +40,7 @@
   background-color: $pagination-bg;
   border: $pagination-border-width solid $pagination-border-color;
 
-  @include hover-focus {
+  &:hover, &:focus {
     color: $pagination-hover-color;
     text-decoration: none;
     background-color: $pagination-hover-bg;

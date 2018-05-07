@@ -2,7 +2,6 @@
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   list-style: none;
   background-color: $breadcrumb-bg;
-  @include clearfix;
   margin-top: 0px;
   margin-bottom: 0px;
 
@@ -30,7 +29,4 @@
 }
 #block-bluerain-breadcrumbs {
   background-color: $breadcrumb-bg;
-  nav {
-    @extend .container;
-  }
 }
