@@ -1,7 +1,7 @@
 body {
   margin: 0px; // make the body extend right to the edge of the window
   width: 100%;
-  background-color: $footer-bg; // important to have the rest page the same color as the footer
+  background-color: $body-bg; // important to have the rest page the same color as the footer
   // General Link layout
   a {
     color: $link-color;
@@ -13,12 +13,17 @@ body {
   }
   p {
     text-align: justify;
-    margin: 0px 0px 16px 0px;
+    margin: 0px 0px 15px 0px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
-.layout-container {
-  background-color: $body-bg; // background for normal blocks
-  color: $body-color; // color for regular text
+div.views-row {
+  margin-bottom: 30px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 body.maintenance-page { // Styling specific to the maintenance page
   background-color: $body-bg;

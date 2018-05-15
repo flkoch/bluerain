@@ -6,8 +6,12 @@ main{
     }
     picture > img {
       width: 100%;
+      display: block;
+      text-align: center;
     }
     h1, h2, h3, h4, h5, h6 {
+      padding-left: 10px;
+      padding-right: 10px;
       a {
         color: inherit;
         &:hover, &:active, &:visited {
@@ -19,6 +23,13 @@ main{
         }
       }
     }
+    .article-content>div:not(.no-padding) {
+      padding: 10px;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 ul.links.inline{
@@ -29,8 +40,9 @@ ul.links.inline{
     padding: 10px;
     margin-right: 10px;
     display: inline-block;
-    &:last-child {
-      margin-right: 0px;
-    }
+  }
+  li.node-readmore {
+    display: block;
+    text-align: right;
   }
 }

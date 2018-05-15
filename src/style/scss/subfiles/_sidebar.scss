@@ -1,7 +1,35 @@
-.sidebar-left {
-  z-index: 5;
-}
-
-.sidebar-right {
-  z-index: 5;
+main {  
+  aside {
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid $footer-bg;
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    &.sidebar-left {
+      background: $sidebar-left-bg;
+      color: $sidebar-left-color;
+    }
+    &.sidebar-right {
+      background: $sidebar-right-bg;
+      color: $sidebar-right-color;
+    }
+    >* {
+      margin-bottom: 10px;
+    }
+    >*:last-child {
+      margin-bottom: 20px;
+    }
+    div.language-switcher-language-session{
+      ul.language-switcher-links {
+        padding: 0px 15px;
+        li {
+          border-right: 1px solid $sidebar-color;
+          &:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+  }
 }

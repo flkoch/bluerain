@@ -16,14 +16,23 @@ $gray-900: #212529 !default;
 
 $brand-primary: $blue;
 $brand-secondary: #0035ce;
+$brand-primary-light: #1d4ff0;
+$brand-secondary-light: #164cec;
 
 // General Colors
 $link-color: $brand-primary;
 $link-hover-color: $link-color;
 
 // Body Colors
-$body-bg: $gray-200 !default;
+$body-bg: $gray-100 !default;
 $body-color: $gray-900 !default;
+$sidebar-bg: $gray-300 !default;
+$sidebar-left-bg: $sidebar-bg !default;
+$sidebar-right-bg: $sidebar-bg !default;
+$sidebar-color: $body-color !default;
+$sidebar-left-color: $sidebar-color !default;
+$sidebar-right-color: $sidebar-color !default;
+
 // Header Colors
 $header-bg: $body-bg;
 $header-menu-bg: $gray-800;
@@ -33,6 +42,7 @@ $header-menu-color: $gray-200;
 $main-menu-bg: $brand-secondary;
 $main-menu-color: $gray-100;
 $main-menu-hover-color: #fff;
+$main-menu-hover-bg: $brand-secondary-light;
 $main-menu-active-color: $main-menu-color;
 $main-menu-dropdown-bg: $gray-800;
 $main-menu-dropdown-color: $gray-300;
@@ -41,6 +51,7 @@ $main-menu-dropdown-hover-bg: $gray-700;
 $main-menu-dropdown-active-color: $gray-100;
 $main-menu-dropdown-active-bg: $gray-800;
 $main-menu-dropdown-devider: $gray-500;
+$main-menu-item-border-color: $gray-500;
 
 // Highlight Colors
 $highlight-bg: $gray-100 !default;
@@ -52,7 +63,7 @@ $breadcrumb-color: $gray-600 !default;
 $breadcrumb-bg: $gray-900 !default;
 $breadcrumb-divider-color: $gray-700 !default;
 $breadcrumb-hover-color: $gray-800 !default;
-$breadcrumb-hover-bg: $gray-500 !default;
+$breadcrumb-hover-bg: $gray-600 !default;
 $breadcrumb-active-color: $gray-500 !default;
 $breadcrumb-active-bg: $breadcrumb-bg !default;
 
