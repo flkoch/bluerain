@@ -1,152 +1,71 @@
 div#main-navbar {
   background: $main-menu-bg;
-  border-bottom: 1px darken($main-menu-bg,10%) solid;
-  display: inline-block;
-  width: 100%;
-  >div {
-    justify-content: space-between;
-    >div {
-      display: inline-block;
-    }
+  color: $main-menu-color;
+  border-bottom: 1px darken($main-menu-bg,20%) solid;
+  display: block;
+  overflow: auto;
+  #mobile-menu-toggle {
+    text-align: center;
+    color: $main-menu-color;
+    background: inherit;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 3rem;
+    line-height: 0.9;
+    border-style: none;
+    margin-bottom: 7px;
+    cursor: pointer;
   }
   nav { // Menu part
-    flex: 0 1 auto;
-    >ul, >ol { // top menu level
-      list-style: none;
-      padding-right: -30px;
-      padding-left: 0px;
-      margin: 0px auto;
-      display: inline-flex;
-      >li, >li.active { // top menu level items
-        display: inline-block;
-        flex: 0 1 auto;
-        position: relative;
-        margin-right: 30px;
-        &:hover {
-          > a { // top menu links hover
+    padding-left: 10px;
+    padding-right: 10px;
+    >ul, >ol {
+      padding: 0px;
+      >li {
+        text-align: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: $main-menu-item-border-width $main-menu-item-border-color solid;
+          &:active {
+            color: $main-menu-active-color;
+          }
+          &:focus, &:hover {
             color: $main-menu-hover-color;
-            text-decoration: inherit;
-            @include box-shadows(0px -2px 0px $main-menu-hover-color inset);
+            background: $main-menu-hover-bg;
           }
-        }
-        > a { //top menu links
-          padding: 13px 0px 15px;
-          color: $main-menu-color;
-          text-decoration: none;
-          display: inline-block;
-        }
-        &.dropdown { // top menu level items with dropdown submenu
-          > a:after {
-            font-family: "FontAwesome";
-            content: "\f0d7";
-            color: $main-menu-color;
-          }
-          >ul.dropdown-menu { // first level submenu
-            top: 50px;
-            left: 0px;
-            z-index: 1000;
-            >li, >li.active { // first level submenu items
-              &.dropdown {
-                > a:after {
-                  font-family: "FontAwesome";
-                  content: "\f0da";
-                  color: $main-menu-dropdown-color;
-                }
-              }
-              > a {
-                color: $main-menu-dropdown-color;
-                &:hover {
-                  box-shadow: none;
-                  color: $main-menu-dropdown-hover-color;
-                }
-              }
-            }
-          }
-          ul.dropdown-menu { // submenus in general
-            display: none;
-            list-style: none;
-            position: absolute;
-            width: $dropdown-menu-width;
-            padding: 0px;
-            background-color: $main-menu-dropdown-bg;
-            color: $main-menu-dropdown-color;
-            li, li.active {
-              border-top: $dropdown-menu-border-top-width $main-menu-dropdown-devider solid;
-              padding: 0px;
-              position: relative;
-              &:last-child {
-                border-bottom: 1px $main-menu-dropdown-devider solid;
-              }
-              &:hover {
-                color: $main-menu-dropdown-hover-color;
-                background: $main-menu-dropdown-hover-bg;
-              }
-              &.dropdown {
-                > a:after {
-                  font-family: "FontAwesome";
-                  content: " \f0da";
-                  color: $main-menu-dropdown-color;
-                }
-                ul.dropdown-menu {
-                  border-left: $dropdown-menu-seperator-width $main-menu-dropdown-devider solid;
-                }
-                &:hover > ul.dropdown-menu {
-                  display: block;
-                }
-                > ul.dropdown-menu {
-                  left: $dropdown-menu-width - $dropdown-menu-seperator-width - $dropdown-menu-padding-horizontal;
-                  top: -$dropdown-menu-border-top-width;
-                }
-              }
-              > a {
-                color: $main-menu-dropdown-color;
-                &:hover {
-                  box-shadow: none;
-                  color: $main-menu-dropdown-hover-color;
-                }
-              }
-              a {
-                padding: $dropdown-menu-item-padding-top $dropdown-menu-item-padding-right $dropdown-menu-item-padding-bottom $dropdown-menu-item-padding-left;
-                display: inline-block;
-                width: 100%;
-                min-height: 45px;
-              }
-            }
-          }
-          &:hover {
-            >ul.dropdown-menu {
-              display: block;
-            }
-          }
-        }
-      }
-      >li.active {
         >a {
-          @include box-shadows(0px -1px 0px $main-menu-active-color inset);
-        }
-        >a.is-active {
-          color: $main-menu-active-color;
-        }
-        &.dropdown ul.dropdown-menu li.active {
-          background-color: $main-menu-dropdown-active-bg;
-          a, a.is-active {
-            color: $main-menu-dropdown-active-color;
+          display: block;
+          padding: 10px;
+          color: inherit;
+          text-decoration: none;
+          &:active {
+            color: inherit;
           }
+          &:focus, &:hover {
+            color: inherit;
+          }
+          &:hover, &:focus, &:active {
+            text-decoration: inherit;
+          }
+        }
+        ul, ol {
+          display: none;
+        }
+        &.active > ul, &.active > ol {
+          display: inline;
         }
       }
     }
   }
-  div.language-switcher-language-url {
-    flex: 0 0 auto;
+  
+  div.language-switcher-language-session {
+    padding: 0px 10px;
+    margin-bottom: 10px;
     ul.language-switcher-links{
-      padding: 13px 0px 15px 30px;
-      display: inline-block;
-      >li {
-        border-right-color: darken($main-menu-color,20%);
-        &:last-child {
-          border: none;
-        }
+      li {
+        border-right: $main-menu-item-border-width solid $main-menu-item-border-color;
         a.language-link {
+          padding: 0px 5px;
           color: darken($main-menu-color,10%);
           &:hover {
             color: $main-menu-hover-color;
@@ -154,6 +73,136 @@ div#main-navbar {
           &.is-active:hover {
             color: darken($main-menu-color,10%);
           }
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) { // larger screens
+    #mobile-menu-toggle {
+      display: none;
+    }
+    nav { // Menu part
+      flex: 0 1 auto;
+      >ul, >ol, >ul.opened, >ol.opened { // top menu level
+        padding: 0px;
+        margin: 0px;
+        display: inline-flex;
+        >li { // top menu level items
+          flex: 0 1 auto;
+          position: relative;
+          margin-right: 30px;
+          border-style: none;
+          &:hover {
+            color: $main-menu-hover-color;
+            text-decoration: inherit;
+            @include box-shadows(0px -2px 0px $main-menu-hover-color inset);
+          }
+          > a { //top menu links
+            padding: 13px 0px 15px;
+            color: $main-menu-color;
+            text-decoration: none;
+            display: inline-block;
+          }
+          &.dropdown { // top menu level items with dropdown submenu
+            > a:after {
+              content: "&#9661;";
+              color: $main-menu-color;
+            }
+            >ul.dropdown-menu { // first level submenu
+              top: 50px;
+              left: 0px;
+              z-index: 1000;
+              >li { // first level submenu items
+                &.dropdown {
+                  > a:after {
+                    content: "&#9661;";
+                    color: $main-menu-dropdown-color;
+                  }
+                }
+                > a {
+                  color: $main-menu-dropdown-color;
+                  &:hover {
+                    box-shadow: none;
+                    color: $main-menu-dropdown-hover-color;
+                  }
+                }
+              }
+            }
+            ul.dropdown-menu { // submenus in general
+              display: none;
+              position: absolute;
+              width: $dropdown-menu-width;
+              padding: 0px;
+              background-color: $main-menu-dropdown-bg;
+              color: $main-menu-dropdown-color;
+              li {
+                border-top: $dropdown-menu-border-top-width $main-menu-dropdown-devider solid;
+                padding: 0px;
+                position: relative;
+                &:last-child {
+                  border-bottom: 1px $main-menu-dropdown-devider solid;
+                }
+                &:hover {
+                  color: $main-menu-dropdown-hover-color;
+                  background: $main-menu-dropdown-hover-bg;
+                }
+                &.dropdown {
+                  > a:after {
+                    content: " &#9655;";
+                    color: $main-menu-dropdown-color;
+                  }
+                  ul.dropdown-menu {
+                    border-left: $dropdown-menu-seperator-width $main-menu-dropdown-devider solid;
+                  }
+                  &:hover > ul.dropdown-menu {
+                    display: block;
+                  }
+                  > ul.dropdown-menu {
+                    left: $dropdown-menu-width - $dropdown-menu-seperator-width - $dropdown-menu-padding-horizontal;
+                    top: -$dropdown-menu-border-top-width;
+                  }
+                }
+                > a {
+                  color: $main-menu-dropdown-color;
+                  &:hover {
+                    box-shadow: none;
+                    color: $main-menu-dropdown-hover-color;
+                  }
+                }
+                a {
+                  padding: $dropdown-menu-item-padding-top $dropdown-menu-item-padding-right $dropdown-menu-item-padding-bottom $dropdown-menu-item-padding-left;
+                  display: inline-block;
+                  width: 100%;
+                  min-height: 45px;
+                }
+              }
+            }
+            &:hover {
+              >ul.dropdown-menu {
+                display: block;
+              }
+            }
+          }
+        }
+        >li.active {
+          >a {
+            @include box-shadows(0px -1px 0px $main-menu-active-color inset);
+          }
+          >a.is-active {
+            color: $main-menu-active-color;
+          }
+          &.dropdown ul.dropdown-menu li.active {
+            background-color: $main-menu-dropdown-active-bg;
+            a, a.is-active {
+              color: $main-menu-dropdown-active-color;
+            }
+          }
+        }
+        >li:last-child {
+          margin-right: 0px;
         }
       }
     }
@@ -168,7 +217,6 @@ div.language-switcher-language-url {
     padding-left: 0px;
     display: inline-flex;
     justify-content: flex-end;
-    list-style: none;
     >li {
       flex: 0 0 auto;
       display: inline-block;

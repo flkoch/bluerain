@@ -1,0 +1,6 @@
+.collapsable {
+    display: none;
+      &.opened {
+        display: block;
+      }
+}

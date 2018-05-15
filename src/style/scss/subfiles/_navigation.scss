@@ -1,0 +1,10 @@
+nav, div[role=navigation] {
+  ul, ol {
+    list-style: none;
+    li {
+      a {
+        color: inherit;
+      }
+    }
+  }
+}
