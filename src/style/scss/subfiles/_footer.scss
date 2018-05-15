@@ -16,7 +16,7 @@ footer.pagefooter {
     }
   }
    section {
-     padding: 25px 0px;
+     padding: 1rem 0rem 3rem;
    }
   nav {
     ul {
@@ -25,7 +25,6 @@ footer.pagefooter {
       padding: 0px;
       width: 100%;
       li {
-        padding: 10px 25px 10px 0px;
         border-top: 1px $footer-link-color solid;
         border-bottom: 1px $footer-link-color solid;
         &:first-child {
@@ -33,6 +32,10 @@ footer.pagefooter {
         }
         &:last-child {
           border-bottom: 2px $footer-link-color solid;
+        }
+        a {
+          padding: 10px 15px 10px;
+          display: block;
         }
       }
     }

@@ -27,8 +27,8 @@ input.button {
 }
 
 .form-item {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 // Specific Locations
@@ -37,7 +37,6 @@ input.button {
   input {
     line-height: 2;
     border-radius: 25px;
-    margin: 5px 10px;
     &[type=search],
     &[type=submit] {
       padding: 5px 15px;
