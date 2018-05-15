@@ -1,0 +1,6 @@
+@mixin transition($arguments...) {
+    @each $arg in $arguments {
+        transition: $arg;
+        -webkit-transition: $arg;
+    }
+}
