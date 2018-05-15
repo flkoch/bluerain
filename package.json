@@ -1,6 +1,6 @@
 {
   "name": "bluerain",
-  "version": "0.1.6-alpha",
+  "version": "0.2.0-alpha",
   "description": "A simple, custom build Drupal template.",
   "main": "gulpfile.js",
   "scripts": {
