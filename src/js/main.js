@@ -24,7 +24,3 @@ for (var i = 0; i < toggleButtons.length; i++) {
         }
     });    
 }
-
-/* window.addEventListener('resize', function(event) {
-    
-}); */
