@@ -1,0 +1,10 @@
+global-styling:
+  version: 1.x
+  css:
+    theme:
+      style/css/main.min.css: { media: screen, minified: true }
+      style/css/print.min.css: { media: print, minified: true }
+  js:
+    js/main.min.js: { minified: true }
+  dependencies:
+    - core/jquery

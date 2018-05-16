@@ -44,7 +44,11 @@ gulp.task('js', function(){
     .pipe(gulp.dest(dirOut + 'js'));
 });
 gulp.task('root-folder', function(){
-  gulp.src(dirIn + '*.*')
+  gulp.src([dirIn + '*.*', dirIn + '.prod.*.*'])
+    .pipe(rename(function(opt){
+      opt.basename = opt.basename.replace(/^\.prod\./,'');
+      return opt;
+    }))
     .pipe(gulp.dest(dirOut));
 });
 gulp.task('dependencies', function(){
@@ -62,7 +66,7 @@ gulp.task('templates', function(){
 gulp.task('build', ['js', 'root-folder', 'dependencies', 'sass:dev', 'sass:build', 'style', 'templates'], function(){
   gulp.src([dirOut + '**/*@(js|scss|css|min.css)', '!**/dependencies/**/*.*',])
     .pipe(header(banner, {pkg:pkg}))
-    .pipe(gulp.dest(dirOut))
+    .pipe(gulp.dest(dirOut));
 });
 gulp.task('deploy:full', function(){
   gulp.src(dirOut + '**/*.*', { base: 'build'})
@@ -74,13 +78,19 @@ gulp.task('deploy:min', function(){
     .pipe(zip('tmpl_bluerain.min.zip'))
     .pipe(gulp.dest('build/'));
 });
+gulp.task('deploy', ['deploy:full', 'deploy:min'], function(){
+});
 gulp.task('push:dev', function(){
-  gulp.src(dirIn + '**/*.*')
-  .pipe(gulp.dest(localServer))
+  gulp.src([dirIn + '**/*.*', dirIn + '.dev.*.*'])
+  .pipe(rename(function(opt){
+    opt.basename = opt.basename.replace(/^\.dev\./,'');
+    return opt;
+  }))
+  .pipe(gulp.dest(localServer));
 });
 gulp.task('push:min', function(){
   gulp.src([dirOut + '*.*', dirOut + 'dependencies/**/*.*', dirOut + '!dependencies/**/*.scss', dirOut + 'js/**/*.min.js', dirOut + 'style/**/*.min.css', dirOut + 'templates/**/*.*'], {base: 'build'})
-  .pipe(gulp.dest(localServer))
+  .pipe(gulp.dest(localServer));
 });
 gulp.task('watch', function(){
   watch(dirIn + 'style/scss/**/*.*', batch(function(events,done){gulp.start('sass:dev', done);}));
