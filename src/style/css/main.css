@@ -219,7 +219,10 @@ div#main-navbar {
     padding-left: 10px;
     padding-right: 10px; }
     div#main-navbar nav > ul, div#main-navbar nav > ol {
-      padding: 0px; }
+      padding: 0px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-column-gap: 10px; }
       div#main-navbar nav > ul > li, div#main-navbar nav > ol > li {
         text-align: center;
         margin-top: 5px;
@@ -520,8 +523,10 @@ main aside {
 footer.pagefooter {
   background-color: #343a40;
   color: #868e96;
-  display: block;
-  overflow: auto; }
+  display: grid;
+  overflow-y: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 10px; }
   footer.pagefooter a {
     color: #868e96; }
     footer.pagefooter a:hover {

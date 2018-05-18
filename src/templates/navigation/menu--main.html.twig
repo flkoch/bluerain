@@ -30,8 +30,7 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <button id="mobile-menu-toggle" class="toggle-btn" data-target="#main-navbar .collapsable" aria-label="Main Menu toggle">&#8801;</button>
-      <ul{{ attributes.addClass("collapsable") }}>
+      <ul{{ attributes }}>
     {% else %}
       <ul class="dropdown-menu">
     {% endif %}

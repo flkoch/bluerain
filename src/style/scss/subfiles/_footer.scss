@@ -6,8 +6,10 @@ $footer-link-hover-decoration: none;
 footer.pagefooter {
   background-color: $footer-bg;
   color: $footer-color;
-  display: block;
-  overflow: auto;
+  display: grid;
+  overflow-y: hidden;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: 10px;
   a {
     color: $footer-link-color;
     &:hover {
@@ -15,9 +17,9 @@ footer.pagefooter {
       text-decoration: $footer-link-hover-decoration;
     }
   }
-   section {
-     padding: 1rem 0rem 3rem;
-   }
+  section {
+    padding: 1rem 0rem 3rem;
+  }
   nav {
     ul {
       list-style: none;
