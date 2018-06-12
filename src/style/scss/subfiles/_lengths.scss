@@ -2,6 +2,7 @@
 // ordered according to place of occurence
 
 // Main Menu
+$main-menu-navbar-padding: 10px;
 $main-menu-item-border-width: 1px;
 
 $dropdown-menu-width: 200px;
@@ -18,9 +19,20 @@ $dropdown-menu-seperator-width: 5px;
 
 $dropdown-menu-border-top-width: 1px;
 
+// Block Headings
+$block-heading-margin-v: .5em !default;
+$block-heading-margin-h: 20px !default;
+
+// Article Headings
+$article-heading-margin-v: .8em !default;
+$article-heading-margin-h: 10px !default;
+
+// Sidebars
+$sidebar-border-width: 2px !default;
+
 // Breadcrumb
-$breadcrumb-padding-x: 0px !default;
-$breadcrumb-padding-y: $breadcrumb-padding-x !default;
+$breadcrumb-padding-x: 10px !default;
+$breadcrumb-padding-y: 0px !default;
 
 // Pagination
 $pagination-padding-x: 0px !default;

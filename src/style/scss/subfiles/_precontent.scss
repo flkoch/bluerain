@@ -1,11 +1,12 @@
 .highlight {
   background: $highlight-bg;
-  position: relative;
+  grid-area: highlighted;
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: 15px;
   border-bottom: $highlight-border;
 }
 .messages {
+  grid-area: messages;
   background: #f2dede;
 }

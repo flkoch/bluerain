@@ -26,12 +26,15 @@ $link-hover-color: $link-color;
 // Body Colors
 $body-bg: $gray-100 !default;
 $body-color: $gray-900 !default;
-$sidebar-bg: $gray-300 !default;
+$sidebar-bg: inherit !default;
 $sidebar-left-bg: $sidebar-bg !default;
 $sidebar-right-bg: $sidebar-bg !default;
 $sidebar-color: $body-color !default;
 $sidebar-left-color: $sidebar-color !default;
 $sidebar-right-color: $sidebar-color !default;
+$sidebar-border-color: $gray-400 !default;
+$sidebar-left-border-color: $sidebar-border-color !default;
+$sidebar-right-border-color: $sidebar-border-color !default;
 
 // Header Colors
 $header-bg: $body-bg;

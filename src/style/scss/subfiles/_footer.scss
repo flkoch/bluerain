@@ -1,15 +1,14 @@
-// Varibales
-$footer-link-hover-decoration: none;
-
-
 // Styling
 footer.pagefooter {
+  grid-area: footer;
   background-color: $footer-bg;
   color: $footer-color;
   display: grid;
   overflow-y: hidden;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
+  grid-auto-rows: max-content;
   grid-gap: 10px;
+  grid-auto-flow: row dense;
   a {
     color: $footer-link-color;
     &:hover {
@@ -19,6 +18,9 @@ footer.pagefooter {
   }
   section {
     padding: 1rem 0rem 3rem;
+  }
+  section.credits > div > div {
+    padding: 0rem 1rem;
   }
   nav {
     ul {
@@ -41,5 +43,14 @@ footer.pagefooter {
         }
       }
     }
+  }
+  @media screen and (min-width: #{map-get($grid-breakpoints, "sm")}) {
+    padding-left: 10px;
+    padding-right: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) {
+    grid-template-columns: repeat(3, minmax(200px, 300px));
+    justify-content: space-evenly;
   }
 }

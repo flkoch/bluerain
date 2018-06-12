@@ -1,9 +1,15 @@
 header {
+  grid-area: head;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1.9em repeat(2, auto);
+  grid-template-areas: "head-menu" "logo" "search";
   background-color: $header-bg;
   position: static;
   #header-menu{
+    grid-area: head-menu;
     width: 100%;
-    height: 1.9rem;
+    height: 1.9em;
     background-color: $header-menu-bg;
     color: $header-menu-color;
     display: block;
@@ -56,9 +62,15 @@ header {
       }
     }
   }
+  @media screen and (min-width: #{map-get($grid-breakpoints, "sm")}) {
+    grid-template-columns: minmax(0px, 100%) 200px;
+    grid-template-rows: 1.9em minmax(50px, auto);
+    grid-template-areas: "head-menu head-menu" "logo search";
+  }
 }
 
 .logo {
+  grid-area: logo;
   max-height: 300px;
   padding: 0px;
   a {
@@ -74,29 +86,32 @@ header {
   }
 }
 
-.search>div {
-  padding: 0px 10px 5px;
-  h2 {
-    display: none;
-  }
-  form {
-    text-align: right;
-    div {
-      input {
-        text-align: left;
-      }
-      input[type=search] {
-        width: 100%;
-        &:focus {
-          @include box-shadows(0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px $brand-primary);
+.search{
+  grid-area: search;
+  >div {
+    padding: 0px 10px 5px;
+    h2 {
+      display: none;
+    }
+    form {
+      text-align: right;
+      div {
+        input {
+          text-align: left;
+        }
+        input[type=search] {
+          width: 100%;
+          &:focus {
+            @include box-shadows(0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px $brand-primary);
+          }
+        }
+        input[type=submit] {
+          display: none;
         }
       }
-      input[type=submit] {
-        display: none;
+      .input-group {
+        align-items: center;
       }
-    }
-    .input-group {
-      align-items: center;
     }
   }
 }

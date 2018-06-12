@@ -12,7 +12,7 @@ const header = require("gulp-header");
 
 var dirOut = "build/bluerain/";
 var dirIn = "src/";
-var localServer = "F:/server/XAMPP/htdocs/my-comp01.fkoch.ch/drupal/themes/custom/bluerain/"
+var localServer = "F:/server/drupal/htdocs/drupal/web/themes/custom/bluerain/"
 const pkg = require("./package.json");
 var banner = ['/**',
   ' * @name <%= pkg.name %> - <%= pkg.description %>',

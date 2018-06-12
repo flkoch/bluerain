@@ -1,4 +1,5 @@
 div#main-navbar {
+  grid-area: main-menu;
   background: $main-menu-bg;
   color: $main-menu-color;
   border-bottom: 1px darken($main-menu-bg,20%) solid;
@@ -17,8 +18,8 @@ div#main-navbar {
     cursor: pointer;
   }
   nav { // Menu part
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: $main-menu-navbar-padding;
+    padding-right: $main-menu-navbar-padding;
     >ul, >ol {
       padding: 0px;
       display: grid;
@@ -59,16 +60,21 @@ div#main-navbar {
         }
       }
     }
+    @media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
+      margin-left: calc(((100vw - #{$content-lg-minwidth}) / 4) - #{$main-menu-navbar-padding});
+    }
   }
   
-  div.language-switcher-language-session {
-    padding: 0px 10px;
+  div.language-switcher-language-url {
+    padding: 0px $main-menu-navbar-padding;
     margin-bottom: 10px;
+    @media screen and (max-width: calc(#{map-get($grid-breakpoints, "md")} - 1px)) {
+      overflow-x: scroll;
+    }
     ul.language-switcher-links{
       li {
         border-right: $main-menu-item-border-width solid $main-menu-item-border-color;
         a.language-link {
-          padding: 0px 5px;
           color: darken($main-menu-color,10%);
           &:hover {
             color: $main-menu-hover-color;
@@ -84,12 +90,15 @@ div#main-navbar {
     }
   }
   @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) { // larger screens
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     #mobile-menu-toggle {
       display: none;
     }
     nav { // Menu part
-      flex: 0 1 auto;
-      >ul, >ol, >ul.opened, >ol.opened { // top menu level
+      display: inline-block;
+      >ul, >ol { // top menu level
         padding: 0px;
         margin: 0px;
         display: inline-flex;
@@ -209,6 +218,9 @@ div#main-navbar {
         }
       }
     }
+    div#lang-switch {
+      display: inline-block;
+    }
   }
 }
 
@@ -229,7 +241,6 @@ div.language-switcher-language-url {
       border-right-style: solid;
       &:last-child {
         border-right: none;
-        margin-right: 0px;
         padding-right: 0px;
       }
       a.language-link:hover {

@@ -2,3 +2,12 @@
 // Links
 $link-decoration: none;
 $link-hover-decoration: $link-decoration;
+
+// Sidebar
+$sidebar-border: $sidebar-border-width solid $sidebar-border-color !default;
+$sidebar-left-border: $sidebar-border-width solid $sidebar-left-border-color !default;
+$sidebar-right-border: $sidebar-border-width solid $sidebar-right-border-color !default;
+
+
+// Footer
+$footer-link-hover-decoration: none;

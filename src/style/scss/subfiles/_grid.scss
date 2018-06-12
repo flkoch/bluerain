@@ -6,3 +6,76 @@ $grid-breakpoints: (
     lg: 1200px
 );
 
+// Grid widths
+$sidebar-lg-minwidth: 220px;
+$content-lg-minwidth: 700px;
+
+// Body Grid layout
+
+div#page-content {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(9, max-content) minmax(max-content, 1fr);
+    grid-template-areas:
+        "head"
+        "main-menu"
+        "highlighted"
+        "messages"
+        "content"
+        "sidebar-left"
+        "sidebar-right"
+        "main-cols"
+        "breadcrumbs"
+        "footer";
+    align-content: stretch;
+    justify-content: stretch;
+}
+@media screen and (min-width: #{map-get($grid-breakpoints, "sm")}) {
+    div#page-content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
+        grid-template-areas:
+            "head head"
+            "main-menu main-menu"
+            "highlighted highlighted"
+            "messages messages"
+            "content content"
+            "sidebar-left sidebar-right"
+            "main-cols main-cols"
+            "breadcrumbs breadcrumbs"
+            "footer footer";
+    }
+}
+@media screen and (min-width: #{map-get($grid-breakpoints, "md")}) {
+    div#page-content {
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
+        grid-template-areas:
+            "head head"
+            "main-menu main-menu"
+            "highlighted highlighted"
+            "messages messages"
+            "content sidebar-left"
+            "content sidebar-right"
+            "main-cols main-cols"
+            "breadcrumbs breadcrumbs"
+            "footer footer";
+    }
+}
+@media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
+    div#page-content {
+        grid-template-columns: 1fr minmax($sidebar-lg-minwidth, 1fr) minmax($content-lg-minwidth, 3fr) minmax($sidebar-lg-minwidth, 1fr) 1fr;
+        grid-template-rows: repeat(4, max-content) minmax(max-content, 2fr) repeat(2, max-content) minmax(max-content, 1fr);
+        grid-template-areas:
+            "head head head head head"
+            "main-menu main-menu main-menu main-menu main-menu"
+            "highlighted highlighted highlighted highlighted highlighted"
+            ". sidebar-left messages sidebar-right ."
+            ". sidebar-left content sidebar-right ."
+            ". sidebar-left main-cols sidebar-right ."
+            "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs"
+            "footer footer footer footer footer";
+    }
+}
+

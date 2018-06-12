@@ -1,35 +1,62 @@
-main {  
-  aside {
-    display: block;
-    overflow: hidden;
-    border-bottom: 1px solid $footer-bg;
-    &:last-of-type {
-      border-bottom: 0;
+aside.sidebar {
+  display: block;
+  overflow: hidden;
+  &#sidebar-left {
+    grid-area: sidebar-left;
+    background: $sidebar-left-bg;
+    color: $sidebar-left-color;
+    border-top: $sidebar-left-border;
+    @media screen and (min-width: #{map-get($grid-breakpoints, "sm")}) {
+      border-right: $sidebar-left-border;
+      border-right-width: $sidebar-border-width / 2;
     }
-    &.sidebar-left {
-      background: $sidebar-left-bg;
-      color: $sidebar-left-color;
+    @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) {
+      border-right: 0;
+      border-top: 0;
+      border-left: $sidebar-left-border;
     }
-    &.sidebar-right {
-      background: $sidebar-right-bg;
-      color: $sidebar-right-color;
+    @media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
+      border-right: $sidebar-left-border;
+      border-left: 0;
     }
-    >* {
-      margin-bottom: 10px;
+  }
+  &#sidebar-right {
+    grid-area: sidebar-right;
+    background: $sidebar-right-bg;
+    color: $sidebar-right-color;
+    border-top: $sidebar-right-border;
+    @media screen and (min-width: #{map-get($grid-breakpoints, "sm")}) {
+      border-left: $sidebar-left-border;
+      border-left-width: $sidebar-border-width / 2;
     }
-    >*:last-child {
-      margin-bottom: 20px;
+    @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) {
+      border-left-width: $sidebar-border-width;
     }
-    div.language-switcher-language-session{
-      ul.language-switcher-links {
-        padding: 0px 15px;
-        li {
-          border-right: 1px solid $sidebar-color;
-          &:last-child {
-            border-right: 0;
-          }
+    @media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
+      border-top: 0;
+    }
+  }
+  >* {
+    margin-bottom: 10px;
+  }
+  >*:last-child {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
+    margin-bottom: 0;
+  }
+  div.language-switcher-language-session{
+    ul.language-switcher-links {
+      padding: 0px 15px;
+      li {
+        border-right: 1px solid $sidebar-color;
+        &:last-child {
+          border-right: 0;
         }
       }
     }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: $block-heading-margin-v $block-heading-margin-h;
   }
 }
