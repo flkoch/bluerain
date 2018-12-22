@@ -12,7 +12,7 @@ const header = require("gulp-header");
 
 var dirOut = "build/bluerain/";
 var dirIn = "src/";
-var localServer = "F:/server/drupal/htdocs/drupal/web/themes/custom/bluerain/"
+var localServer = "F:/server/xampp/htdocs/drupal/themes/custom/bluerain"
 const pkg = require("./package.json");
 var banner = ['/**',
   ' * @name <%= pkg.name %> - <%= pkg.description %>',
@@ -22,78 +22,91 @@ var banner = ['/**',
   ' */',
   ''].join('\n');
 
-gulp.task('sass:dev', function(){
+gulp.task('sass:dev', function(done){
   gulp.src(dirIn + 'style/scss/*.scss')
     .pipe(smap.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(smap.write('.'))
     .pipe(gulp.dest(dirIn + 'style/css/'));
+  done();
 });
-gulp.task('sass:build', function(){
+gulp.task('sass:build', function(done){
   gulp.src(dirIn + 'style/scss/*.scss')
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dirOut + 'style/css'));
+  done();
 });
-gulp.task('js', function(){
+gulp.task('sass', gulp.parallel('sass:build', 'sass:dev'));
+gulp.task('js', function(done){
   gulp.src(dirIn + 'js/*.js')
     .pipe(gulp.dest(dirOut + 'js'))
     .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(dirOut + 'js'));
+  done();
 });
-gulp.task('root-folder', function(){
+gulp.task('root-folder', function(done){
   gulp.src([dirIn + '*.*', dirIn + '.prod.*.*'])
     .pipe(rename(function(opt){
       opt.basename = opt.basename.replace(/^\.prod\./,'');
       return opt;
     }))
     .pipe(gulp.dest(dirOut));
+    done();
 });
-gulp.task('dependencies', function(){
+gulp.task('dependencies', function(done){
   gulp.src(dirIn + 'dependencies/**/*.*')
     .pipe(gulp.dest(dirOut + 'dependencies'));
+    done();
 });
-gulp.task('style', ['sass:dev', 'sass:build'], function(){
+gulp.task('style', gulp.series('sass', function(done){
   gulp.src(dirIn + 'style/**/*.*')
     .pipe(gulp.dest(dirOut + 'style'));
-});
-gulp.task('templates', function(){
+  done();
+}));
+gulp.task('templates', function(done){
   gulp.src(dirIn + 'templates/**/*.*')
     .pipe(gulp.dest(dirOut + 'templates'));
+  done();
 });
-gulp.task('build', ['js', 'root-folder', 'dependencies', 'sass:dev', 'sass:build', 'style', 'templates'], function(){
+gulp.task('build', gulp.series(gulp.parallel('js', 'root-folder', 'dependencies', 'style', 'templates'), function(done){
   gulp.src([dirOut + '**/*@(js|scss|css|min.css)', '!**/dependencies/**/*.*',])
     .pipe(header(banner, {pkg:pkg}))
     .pipe(gulp.dest(dirOut));
-});
-gulp.task('deploy:full', function(){
+  done();
+}));
+gulp.task('deploy:full', function(done){
   gulp.src(dirOut + '**/*.*', { base: 'build'})
     .pipe(zip('tmpl_bluerain.zip'))
     .pipe(gulp.dest('build/'));
+  done();
 });
-gulp.task('deploy:min', function(){
+gulp.task('deploy:min', function(done){
   gulp.src([dirOut + '*.*', dirOut + 'dependencies/**/*.*', dirOut + '!dependencies/**/*.scss', dirOut + 'js/**/*.min.js', dirOut + 'style/**/*.min.css', dirOut + 'templates/**/*.*'], {base: 'build'})
     .pipe(zip('tmpl_bluerain.min.zip'))
     .pipe(gulp.dest('build/'));
+  done();
 });
-gulp.task('deploy', ['deploy:full', 'deploy:min'], function(){
-});
-gulp.task('push:dev', function(){
+gulp.task('deploy', gulp.parallel('deploy:full', 'deploy:min'));
+gulp.task('push:dev', function(done){
   gulp.src([dirIn + '**/*.*', dirIn + '.dev.*.*'])
   .pipe(rename(function(opt){
     opt.basename = opt.basename.replace(/^\.dev\./,'');
     return opt;
   }))
   .pipe(gulp.dest(localServer));
+  done();
 });
-gulp.task('push:min', function(){
+gulp.task('push:min', function(done){
   gulp.src([dirOut + '*.*', dirOut + 'dependencies/**/*.*', dirOut + '!dependencies/**/*.scss', dirOut + 'js/**/*.min.js', dirOut + 'style/**/*.min.css', dirOut + 'templates/**/*.*'], {base: 'build'})
   .pipe(gulp.dest(localServer));
+  done();
 });
-gulp.task('watch', function(){
-  watch(dirIn + 'style/scss/**/*.*', batch(function(events,done){gulp.start('sass:dev', done);}));
-  watch(dirIn + 'js/**/*.*', batch(function(events,done){gulp.start('js', done);}));
-  watch(dirIn + '**/*.*', batch(function(events,done){gulp.start('push:dev', done);}));
+gulp.task('watch', function(done){
+  gulp.watch(dirIn + 'style/scss/**/*.*', gulp.task('sass:dev'));
+  gulp.watch(dirIn + 'js/**/*.*', gulp.task('js'));
+  gulp.watch(dirIn + '**/*.*', gulp.task('push:dev'));
+  done();
 });
