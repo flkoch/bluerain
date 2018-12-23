@@ -3,6 +3,8 @@
 
 // Main Menu
 $main-menu-navbar-padding: 10px;
+$main-menu-navbar-padding-left: $main-menu-navbar-padding;
+$main-menu-navbar-padding-right: $main-menu-navbar-padding;
 $main-menu-item-border-width: 1px;
 
 $dropdown-menu-width: 200px;
@@ -12,20 +14,20 @@ $dropdown-menu-item-padding-right: 10px;
 $dropdown-menu-item-padding-bottom: 10px;
 $dropdown-menu-item-padding-left: 10px;
 
-$dropdown-menu-padding-horizontal: 0px;
-$dropdown-menu-padding-vertical: 0px;
+$dropdown-menu-padding-x: 0px;
+$dropdown-menu-padding-y: 0px;
 
 $dropdown-menu-seperator-width: 5px;
 
 $dropdown-menu-border-top-width: 1px;
 
 // Block Headings
-$block-heading-margin-v: .5em !default;
-$block-heading-margin-h: 20px !default;
+$block-heading-margin-x: 0px !default;
+$block-heading-margin-y: 20px !default;
 
 // Article Headings
-$article-heading-margin-v: .8em !default;
-$article-heading-margin-h: 10px !default;
+$article-heading-margin-x: 0px !default;
+$article-heading-margin-y: 10px !default;
 
 // Sidebars
 $sidebar-border-width: 2px !default;
@@ -42,3 +44,4 @@ $pagination-border-width: 2px !default;
 
 // Footer Menu
 $footer-menu-width: 200px;
+$footer-menu-border-width: 2px;

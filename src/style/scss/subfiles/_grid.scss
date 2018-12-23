@@ -16,10 +16,14 @@ div#page-content {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: repeat(9, max-content) minmax(max-content, 1fr);
+    grid-template-rows: repeat(15, max-content) minmax(0px,  1fr);
     grid-template-areas:
-        "head"
+        "head-menu"
+        "logo"
+        "search"
+        "main-menu-toggle"
         "main-menu"
+        "language-switcher"
         "highlighted"
         "messages"
         "content"
@@ -27,7 +31,9 @@ div#page-content {
         "sidebar-right"
         "main-cols"
         "breadcrumbs"
-        "footer";
+        "footer"
+        "footer-menu"
+        "credits";
     align-content: stretch;
     justify-content: stretch;
 }
@@ -36,15 +42,20 @@ div#page-content {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
         grid-template-areas:
-            "head head"
+            "head-menu head-menu"
+            "logo logo"
+            "search search"
+            "main-menu-toggle main-menu-toggle"
             "main-menu main-menu"
+            "language-switcher language-switcher"
             "highlighted highlighted"
             "messages messages"
             "content content"
             "sidebar-left sidebar-right"
             "main-cols main-cols"
             "breadcrumbs breadcrumbs"
-            "footer footer";
+            "footer footer-menu"
+            "credits footer-menu";
     }
 }
 @media screen and (min-width: #{map-get($grid-breakpoints, "md")}) {
@@ -52,30 +63,33 @@ div#page-content {
         grid-template-columns: 4fr 1fr;
         grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
         grid-template-areas:
-            "head head"
-            "main-menu main-menu"
+            "head-menu head-menu"
+            "logo search"
+            "main-menu language-switcher"
             "highlighted highlighted"
             "messages messages"
             "content sidebar-left"
             "content sidebar-right"
             "main-cols main-cols"
             "breadcrumbs breadcrumbs"
-            "footer footer";
+            "footer footer-menu"
+            "credits footer-menu";
     }
 }
 @media screen and (min-width: #{map-get($grid-breakpoints, "lg")}) {
     div#page-content {
         grid-template-columns: 1fr minmax($sidebar-lg-minwidth, 1fr) minmax($content-lg-minwidth, 3fr) minmax($sidebar-lg-minwidth, 1fr) 1fr;
-        grid-template-rows: repeat(4, max-content) minmax(max-content, 2fr) repeat(2, max-content) minmax(max-content, 1fr);
+        grid-template-rows: repeat(6, max-content) minmax(max-content, 1fr) repeat(2, max-content);
         grid-template-areas:
-            "head head head head head"
-            "main-menu main-menu main-menu main-menu main-menu"
+            "head-menu head-menu head-menu head-menu head-menu"
+            ". logo logo search ."
+            "main-menu-left main-menu-left main-menu language-switcher main-menu-right"
             "highlighted highlighted highlighted highlighted highlighted"
-            ". sidebar-left messages sidebar-right ."
+            ". messages messages messages ."
             ". sidebar-left content sidebar-right ."
             ". sidebar-left main-cols sidebar-right ."
-            "breadcrumbs breadcrumbs breadcrumbs breadcrumbs breadcrumbs"
-            "footer footer footer footer footer";
+            "breadcrumbs-left breadcrumbs breadcrumbs breadcrumbs breadcrumbs-right"
+            "footer footer footer-menu credits credits";
     }
 }
 

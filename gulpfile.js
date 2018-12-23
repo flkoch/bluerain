@@ -105,8 +105,8 @@ gulp.task('push:min', function(done){
   done();
 });
 gulp.task('watch', function(done){
-  gulp.watch(dirIn + 'style/scss/**/*.*', gulp.task('sass:dev'));
-  gulp.watch(dirIn + 'js/**/*.*', gulp.task('js'));
-  gulp.watch(dirIn + '**/*.*', gulp.task('push:dev'));
+  gulp.watch(dirIn + 'style/scss/**/*.*', gulp.series('sass:dev', 'push:dev'));
+  gulp.watch(dirIn + 'js/**/*.*', gulp.series('js', 'push:dev'));
+  gulp.watch([dirIn + 'templates/**/*.*', dirIn + '*.*'], gulp.task('push:dev'));
   done();
 });

@@ -1,5 +1,8 @@
 main{
   grid-area: content;
+  display: block;
+  padding: 0px 10px;
+  margin-bottom: 2em;
   article {
     img { // no overflow of images, retain proportion
       max-width: 100%;
@@ -11,7 +14,7 @@ main{
       text-align: center;
     }
     h1, h2, h3, h4, h5, h6 {
-      margin: $article-heading-margin-v $article-heading-margin-h;
+      margin: $article-heading-margin-y $article-heading-margin-x;
       a {
         color: inherit;
         &:hover, &:active, &:visited {
@@ -23,15 +26,9 @@ main{
         }
       }
     }
-    .article-content>div:not(.no-padding) {
-      padding: 0px 10px;
-    }
   }
   h1, h2, h3, h4, h5, h6 {
-    margin: $block-heading-margin-v $block-heading-margin-h;
-  }
-  div.views-element-container {
-    padding: 0px 10px; 
+    margin: $block-heading-margin-y $block-heading-margin-x;
   }
 }
 ul.links.inline{
@@ -48,6 +45,15 @@ ul.links.inline{
     text-align: right;
   }
 }
-div#main-cols > section.col {
+div#main-cols {
   grid-area: main-cols;
+  display: block;
+  section {
+    display: inline-flex;
+    flex: 1 1;
+    padding: 0px 10px;
+  }
+  section.col {
+    margin-left: 2pt $sidebar-border-color solid;
+  }
 }
