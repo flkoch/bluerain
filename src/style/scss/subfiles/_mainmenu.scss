@@ -108,6 +108,7 @@ div#main-navbar {
     }
     >nav { // Menu part
       display: inline-block;
+      padding-left: 0px;
       >ul, >ol { // top menu level
         padding: 0px;
         margin: 0px;

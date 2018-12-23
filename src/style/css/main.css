@@ -4,7 +4,22 @@ div#page-content {
   min-height: 100vh;
   grid-template-columns: 100%;
   grid-template-rows: repeat(15, max-content) minmax(0px, 1fr);
-  grid-template-areas: "head-menu" "logo" "search" "main-menu-toggle" "main-menu" "language-switcher" "highlighted" "messages" "content" "sidebar-left" "sidebar-right" "main-cols" "breadcrumbs" "footer" "footer-menu" "credits";
+  grid-template-areas: "head-menu"
+ "logo"
+ "search"
+ "main-menu-toggle"
+ "main-menu"
+ "language-switcher"
+ "highlighted"
+ "messages"
+ "content"
+ "sidebar-left"
+ "sidebar-right"
+ "main-cols"
+ "breadcrumbs"
+ "footer"
+ "footer-menu"
+ "credits";
   align-content: stretch;
   justify-content: stretch; }
 
@@ -12,19 +27,50 @@ div#page-content {
   div#page-content {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
-    grid-template-areas: "head-menu head-menu" "logo logo" "search search" "main-menu-toggle main-menu-toggle" "main-menu main-menu" "language-switcher language-switcher" "highlighted highlighted" "messages messages" "content content" "sidebar-left sidebar-right" "main-cols main-cols" "breadcrumbs breadcrumbs" "footer footer-menu" "credits footer-menu"; } }
+    grid-template-areas: "head-menu head-menu"
+ "logo logo"
+ "search search"
+ "main-menu-toggle main-menu-toggle"
+ "main-menu main-menu"
+ "language-switcher language-switcher"
+ "highlighted highlighted"
+ "messages messages"
+ "content content"
+ "sidebar-left sidebar-right"
+ "main-cols main-cols"
+ "breadcrumbs breadcrumbs"
+ "footer footer-menu"
+ "credits footer-menu"; } }
 
 @media screen and (min-width: 768px) {
   div#page-content {
     grid-template-columns: 4fr 1fr;
     grid-template-rows: repeat(8, max-content) minmax(max-content, 1fr);
-    grid-template-areas: "head-menu head-menu" "logo search" "main-menu language-switcher" "highlighted highlighted" "messages messages" "content sidebar-left" "content sidebar-right" "main-cols main-cols" "breadcrumbs breadcrumbs" "footer footer-menu" "credits footer-menu"; } }
+    grid-template-areas: "head-menu head-menu"
+ "logo search"
+ "main-menu language-switcher"
+ "highlighted highlighted"
+ "messages messages"
+ "content sidebar-left"
+ "content sidebar-right"
+ "main-cols main-cols"
+ "breadcrumbs breadcrumbs"
+ "footer footer-menu"
+ "credits footer-menu"; } }
 
 @media screen and (min-width: 1200px) {
   div#page-content {
     grid-template-columns: 1fr minmax(220px, 1fr) minmax(700px, 3fr) minmax(220px, 1fr) 1fr;
     grid-template-rows: repeat(6, max-content) minmax(max-content, 1fr) repeat(2, max-content);
-    grid-template-areas: "head-menu head-menu head-menu head-menu head-menu" ". logo logo search ." "main-menu-left main-menu-left main-menu language-switcher main-menu-right" "highlighted highlighted highlighted highlighted highlighted" ". messages messages messages ." ". sidebar-left content sidebar-right ." ". sidebar-left main-cols sidebar-right ." "breadcrumbs-left breadcrumbs breadcrumbs breadcrumbs breadcrumbs-right" "footer footer footer-menu credits credits"; } }
+    grid-template-areas: "head-menu head-menu head-menu head-menu head-menu"
+ ". logo logo search ."
+ "main-menu-left main-menu-left main-menu language-switcher main-menu-right"
+ "highlighted highlighted highlighted highlighted highlighted"
+ ". messages messages messages ."
+ ". sidebar-left content sidebar-right ."
+ ". sidebar-left main-cols sidebar-right ."
+ "breadcrumbs-left breadcrumbs breadcrumbs breadcrumbs breadcrumbs-right"
+ "footer footer footer-menu credits credits"; } }
 
 .collapsable {
   display: none; }
