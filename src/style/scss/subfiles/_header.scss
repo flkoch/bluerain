@@ -1,9 +1,5 @@
 header {
-  grid-area: head;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1.9em repeat(2, auto);
-  grid-template-areas: "head-menu" "logo" "search";
+  display: contents;
   background-color: $header-bg;
   position: static;
   #header-menu{
@@ -71,7 +67,6 @@ header {
 
 .logo {
   grid-area: logo;
-  max-height: 300px;
   padding: 0px;
   a {
     width: 100%;
@@ -88,6 +83,7 @@ header {
 
 .search{
   grid-area: search;
+  align-self: flex-end;
   >div {
     padding: 0px 10px 5px;
     h2 {

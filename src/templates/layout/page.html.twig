@@ -64,6 +64,7 @@
 {% endif %}
 {% if page.primary_menu or page.language_switcher %}
   <div id="main-navbar">
+    <filler id="main-menu"></filler>
     {{ page.primary_menu }}
     {{ page.language_switcher }}
   </div>
@@ -98,16 +99,11 @@
   {% endif %}
 {% endwith %}
 {{ page.breadcrumb }}
+<filler id="breadcrumbs"></filler>
 {% if page.footer or page.footer_menu or page.credits %}
   <footer role="contentinfo" class="pagefooter">
-    {% if page.footer %}
-      <section class="footer"> {{ page.footer }} </section>
-    {% endif %}
-    {% if page.footer_menu %}
-      <section class="footer-menu"> {{ page.footer_menu }} </section>
-    {% endif %}
-    {% if page.credits %}
-      <section class="credits"> {{ page.credits }} </section>
-    {% endif %}
+    <section class="footer"> {{ page.footer }} </section>
+    <section class="footer-menu"> {{ page.footer_menu }} </section>
+    <section class="credits"> {{ page.credits }} </section>
   </footer>
 {% endif %}

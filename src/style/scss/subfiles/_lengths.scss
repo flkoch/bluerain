@@ -3,6 +3,8 @@
 
 // Main Menu
 $main-menu-navbar-padding: 10px;
+$main-menu-navbar-padding-left: $main-menu-navbar-padding;
+$main-menu-navbar-padding-right: $main-menu-navbar-padding;
 $main-menu-item-border-width: 1px;
 
 $dropdown-menu-width: 200px;
@@ -42,3 +44,4 @@ $pagination-border-width: 2px !default;
 
 // Footer Menu
 $footer-menu-width: 200px;
+$footer-menu-border-width: 2px;

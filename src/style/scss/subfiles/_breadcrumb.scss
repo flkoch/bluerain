@@ -4,7 +4,6 @@
   margin-bottom: 0px;
 
   > li {
-    float: left;
     display: inline;
     + li::before {
       // padding-right: .5rem;
@@ -41,4 +40,12 @@
 }
 .breadcrumb-region {
   grid-area: breadcrumbs;
+}
+filler#breadcrombs {
+  background-color: $breadcrumb-bg;
+  z-index: -100;
+  grid-row-start: breadcrumbs-left-start;
+  grid-row-end: breadcrumbs-right-end;
+  grid-column-start: breadcrumbs-left-start;
+  grid-column-end: breadcrumbs-right-end;
 }

@@ -1,13 +1,12 @@
 // Images
 
 div.images {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-gap: 10px;
+  align-content: space-between;
+  justify-content: space-evenly;
+  grid-auto-flow: row dense;
   margin-left: 0px;
   margin-right: 0px;
-  div.image {
-    text-align: center;
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 }
